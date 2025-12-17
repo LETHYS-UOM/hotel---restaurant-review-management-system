@@ -8,6 +8,7 @@ const ReviewsHeader = () => {
       {/* ROW 1: Title and Top Actions */}
       <div className="header-top-row">
         <h1 className="page-title">Reviews</h1>
+        
         <div className="top-actions">
           <div className="search-container">
             <Search size={18} className="search-icon" />

@@ -1,82 +1,32 @@
-import Sidebar from './components/SideBar.tsx';
-import DashboardHeader from './components/DashboardHeader.tsx';
-import MetricCard from './components/MetricCard.tsx';
-import SentimentChart from './components/SentimentChart.tsx';
-import TrendsChart from './components/TrendsChart.tsx';
-import LatestReviews from './components/LatestReviews.tsx';
-import CategoryPerformance from './components/CategoryPerformance.tsx';
-import AIInsights from './components/AIInsights.tsx';
-import AlertsPanel from './components/AlertsPanel.tsx';
-import ReviewSources from './components/ReviewSources.tsx';
-import { Star, Link2, MessageSquare, Frown } from 'lucide-react';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Sidebar from './components/SideBar'; // Fixed "SideBar" to "Sidebar"
+import ReviewsPage from './pages/ReviewsPage';
+import DashboardPage from './pages/DashboardPage';
 import './App.css';
 
 function App() {
   return (
-    <div className="app-container">
-      <Sidebar />
-      
-      <main className="main-content">
-        {/* Header */}
-        <DashboardHeader />
+    // 1. Router wraps EVERYTHING
+    <BrowserRouter>
+      <div className="app-container">
+        
+        {/* 2. Sidebar sits here ONCE. Inside Router so links work */}
+        <Sidebar />
 
-        {/* Content Area */}
-        <div className="content-area">
-          {/* Metrics Grid */}
-          <div className="metrics-grid">
-            <MetricCard
-              icon={<Star size={20} />}
-              label="Average Rating"
-              value="4.3"
-              change="+0.2"
-              changeType="up"
-            />
-            <MetricCard
-              icon={<Link2 size={20} />}
-              label="Active Sources"
-              value="3"
-            />
-            <MetricCard
-              icon={<MessageSquare size={20} />}
-              label="Total Reviews"
-              value="1,247"
-              change="+12%"
-              changeType="up"
-            />
-            <MetricCard
-              icon={<Frown size={20} />}
-              label="Negative Reviews"
-              value="89"
-              change="-3%"
-              changeType="down"
-            />
-          </div>
+        <main className="main-content">
+          <Routes>
+            {/* Redirect root "/" to Dashboard */}
+            <Route path="/" element={<Navigate to="/dashboard" replace />} />
+            
+            {/* The actual pages */}
+            <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/reviews" element={<ReviewsPage />} />
+          </Routes>
+        </main>
 
-          {/* Charts Row */}
-          <div className="dashboard-grid">
-            <SentimentChart />
-            <TrendsChart />
-          </div>
-
-          {/* Reviews and Category Row */}
-          <div className="dashboard-grid">
-            <LatestReviews />
-            <CategoryPerformance />
-          </div>
-
-          {/* AI Insights and Alerts Row */}
-          <div className="dashboard-grid">
-            <AIInsights />
-            <AlertsPanel />
-          </div>
-
-          {/* Review Sources */}
-          <div className="dashboard-grid">
-            <ReviewSources />
-          </div>
-        </div>
-      </main>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

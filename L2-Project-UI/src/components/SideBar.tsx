@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom'; // <--- 1. Import Router hooks
 import { 
   LayoutDashboard, MessageSquare, BarChart3, Target, Plug, 
   Building2, Users, Settings, Bell, User, HelpCircle, Mail, LogOut, ChevronLeft 
@@ -6,11 +7,15 @@ import {
 import './Sidebar.css';
 
 const Sidebar = () => {
-  const [activeLink, setActiveLink] = useState('Reviews');
+  const navigate = useNavigate();   // Tool to change pages
+  const location = useLocation();   // Tool to read current URL
+
+  // Helper: Returns true if the current URL matches the path
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav className="sidebar">
-      {/* 1. HEADER (Remains fixed at the top) */}
+      {/* 1. HEADER */}
       <div className="sidebar-header">
         <div className="logo-avatar">HR</div>
         <div className="header-info">
@@ -22,16 +27,27 @@ const Sidebar = () => {
         </button>
       </div>
 
-      {/* 2. MENU (Now contains EVERYTHING and scrolls together) */}
+      {/* 2. MENU */}
       <div className="sidebar-menu">
         
         {/* Main Section */}
         <div className="menu-section">
-          <SidebarItem icon={<LayoutDashboard size={20} />} text="Dashboard" active={activeLink === 'Dashboard'} onClick={() => setActiveLink('Dashboard')} />
-          <SidebarItem icon={<MessageSquare size={20} />} text="Reviews" active={activeLink === 'Reviews'} onClick={() => setActiveLink('Reviews')} />
-          <SidebarItem icon={<BarChart3 size={20} />} text="Insights" active={activeLink === 'Insights'} onClick={() => setActiveLink('Insights')} />
-          <SidebarItem icon={<Target size={20} />} text="Competitors" active={activeLink === 'Competitors'} onClick={() => setActiveLink('Competitors')} />
-          <SidebarItem icon={<Plug size={20} />} text="Sources" active={activeLink === 'Sources'} onClick={() => setActiveLink('Sources')} />
+          <SidebarItem 
+            icon={<LayoutDashboard size={20} />} 
+            text="Dashboard" 
+            active={isActive('/dashboard')} 
+            onClick={() => navigate('/dashboard')} 
+          />
+          <SidebarItem 
+            icon={<MessageSquare size={20} />} 
+            text="Reviews" 
+            active={isActive('/reviews')} 
+            onClick={() => navigate('/reviews')} 
+          />
+          {/* Note: You can add routes for these later in App.tsx */}
+          <SidebarItem icon={<BarChart3 size={20} />} text="Insights" />
+          <SidebarItem icon={<Target size={20} />} text="Competitors" />
+          <SidebarItem icon={<Plug size={20} />} text="Sources" />
         </div>
 
         <div className="divider"></div>
@@ -39,8 +55,8 @@ const Sidebar = () => {
         {/* Organization Section */}
         <div className="menu-section">
           <div className="section-title">ORGANIZATION</div>
-          <SidebarItem icon={<Building2 size={20} />} text="Groups & Branches" active={activeLink === 'Groups'} onClick={() => setActiveLink('Groups')} />
-          <SidebarItem icon={<Users size={20} />} text="Team" active={activeLink === 'Team'} onClick={() => setActiveLink('Team')} />
+          <SidebarItem icon={<Building2 size={20} />} text="Groups & Branches" />
+          <SidebarItem icon={<Users size={20} />} text="Team" />
         </div>
 
         <div className="divider"></div>
@@ -48,14 +64,14 @@ const Sidebar = () => {
         {/* System Section */}
         <div className="menu-section">
           <div className="section-title">SYSTEM</div>
-          <SidebarItem icon={<Settings size={20} />} text="Settings" active={activeLink === 'Settings'} onClick={() => setActiveLink('Settings')} />
-          <SidebarItem icon={<Bell size={20} />} text="Notifications" badge="3" active={activeLink === 'Notifications'} onClick={() => setActiveLink('Notifications')} />
-          <SidebarItem icon={<User size={20} />} text="Profile" active={activeLink === 'Profile'} onClick={() => setActiveLink('Profile')} />
+          <SidebarItem icon={<Settings size={20} />} text="Settings" />
+          <SidebarItem icon={<Bell size={20} />} text="Notifications" badge="3" />
+          <SidebarItem icon={<User size={20} />} text="Profile" />
         </div>
 
         <div className="divider"></div>
 
-        {/* Footer Items (Now part of the scrollable list) */}
+        {/* Footer Items */}
         <div className="menu-section">
           <SidebarItem icon={<HelpCircle size={20} />} text="Help & Docs" />
           <SidebarItem icon={<Mail size={20} />} text="Contact Support" />
@@ -63,15 +79,13 @@ const Sidebar = () => {
         </div>
 
         <div className="version-tag">v2.4.1</div>
-        
-        {/* Add extra padding at bottom so the last item isn't cut off */}
         <div style={{ height: '20px' }}></div>
       </div>
     </nav>
   );
 };
 
-// Reusable component (Same as before)
+// Reusable component (Stays the same)
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const SidebarItem = ({ icon, text, active = false, badge, isDanger = false, onClick }: any) => {
   return (

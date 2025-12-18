@@ -5,7 +5,7 @@ import './ReviewItem.css';// We will share one CSS file for the list layout
 // Define the shape of a Review Object
 interface ReviewProps {
   review: {
-    id: number;
+    id: number | string;
     rating: number;
     userName: string;
     text: string;
@@ -15,9 +15,10 @@ interface ReviewProps {
     date: string;
     status: 'Replied' | 'AI Draft' | 'Pending';
   };
+  onOpen: () => void;
 }
 
-const ReviewItem = ({ review }: ReviewProps) => {
+const ReviewItem = ({ review, onOpen }: ReviewProps) => {
   return (
     <div className="review-row">
       
@@ -71,7 +72,7 @@ const ReviewItem = ({ review }: ReviewProps) => {
 
       {/* 8. Actions */}
       <div className="col-actions">
-        <button className="open-btn">
+        <button className="open-btn" onClick={onOpen}>
           Open <ArrowRight size={14} />
         </button>
       </div>

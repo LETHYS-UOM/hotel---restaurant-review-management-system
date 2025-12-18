@@ -47,7 +47,12 @@ const Sidebar = () => {
           {/* Note: You can add routes for these later in App.tsx */}
           <SidebarItem icon={<BarChart3 size={20} />} text="Insights" />
           <SidebarItem icon={<Target size={20} />} text="Competitors" />
-          <SidebarItem icon={<Plug size={20} />} text="Sources" />
+          <SidebarItem 
+            icon={<Plug size={20} />} 
+            text="Sources" 
+            active={isActive('/sources')} 
+            onClick={() => navigate('/sources')} 
+          />
         </div>
 
         <div className="divider"></div>

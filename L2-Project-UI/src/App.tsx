@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/SideBar'; // Fixed "SideBar" to "Sidebar"
 import ReviewsPage from './pages/ReviewsPage';
 import DashboardPage from './pages/DashboardPage';
+import ReviewSourcesPage from './pages/ReviewSourcesPage';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             {/* The actual pages */}
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/reviews" element={<ReviewsPage />} />
+            <Route path="/sources" element={<ReviewSourcesPage />} />
           </Routes>
         </main>
 

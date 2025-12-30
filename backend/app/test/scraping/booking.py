@@ -9,6 +9,21 @@ from typing import List
 
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
+# --- connetion to Database ---
+import pyodbc
+
+conn = pyodbc.connect(
+    "DRIVER={ODBC Driver 18 for SQL Server};"
+    "SERVER=localhost;"
+    "DATABASE=BookingScraper;"
+    "UID=sa;"
+    "PWD=Qwer3552;"
+    "TrustServerCertificate=yes;"
+)
+
+cursor = conn.cursor()
+
+
 # --- Create screenshots directory ---
 screenshot_dir = pathlib.Path("screenshots")
 screenshot_dir.mkdir(parents=True, exist_ok=True)
@@ -55,6 +70,39 @@ class Review:
     def __post_init__(self):
         if self.photo is None:
             self.photo = []
+
+def insert_review(cursor, review: Review):
+    cursor.execute("""
+        INSERT INTO reviews (
+            review_id, title, score, positive_txt, negative_txt,
+            posted_date, reviewer_stay_date, num_of_nights,
+            traveler_type, room_name, raw_review
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """,
+    review.review_id,
+    review.title,
+    review.score,
+    review.positive_txt,
+    review.negative_txt,
+    review.posted_date,
+    review.reviewer_stay_date,
+    review.num_of_nights,
+    review.traveler_type,
+    review.room_name,
+    review.raw_review
+    )
+
+    for pic in review.photo:
+        cursor.execute("""
+            INSERT INTO review_photos (review_id, src, alt)
+            VALUES (?, ?, ?)
+        """,
+        review.review_id,
+        pic.src,
+        pic.alt
+        )
+
 
 
 all_reviews: List[Review] = []
@@ -297,6 +345,7 @@ with sync_playwright() as p:
         print("Closing browser...")
         browser.close()
 
+
     # Save to JSON
     if all_reviews:
         output_dir = pathlib.Path("BookingOutput")
@@ -310,5 +359,17 @@ with sync_playwright() as p:
             encoding="utf-8"
         )
         print(f"\n✓ Successfully wrote {len(all_reviews)} reviews to reviews.json")
+        # Insert into database
+        print("\nSaving reviews to database...")
+
+        for review in all_reviews:
+            insert_review(cursor, review)
+
+        conn.commit()
+        print(f"✓ Successfully saved {len(all_reviews)} reviews to database")
     else:
         print("\nNo reviews were collected.")
+
+
+cursor.close()
+conn.close()

@@ -14,7 +14,7 @@ import pyodbc
 
 conn = pyodbc.connect(
     "DRIVER={ODBC Driver 18 for SQL Server};"
-    "SERVER=localhost;"
+    "SERVER=178.128.84.124;"
     "DATABASE=BookingScraper;"
     "UID=sa;"
     "PWD=Qwer3552;"
@@ -373,3 +373,8 @@ with sync_playwright() as p:
 
 cursor.close()
 conn.close()
+
+from ..services import review_processor
+
+review_processor.main()
+print("✓ Review processing completed.")

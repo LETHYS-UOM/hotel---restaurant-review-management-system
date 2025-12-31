@@ -6,6 +6,9 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import os
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
+
+
 
 load_dotenv()  # Load environment variables from .env file
 # ==========================================
@@ -39,6 +42,15 @@ class ReviewModel(BaseModel):
 # 3. APP INITIALIZATION
 # ==========================================
 app = FastAPI(title="Review Management API")
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins (React, etc.) to connect
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows GET, POST, PUT, DELETE, etc.
+    allow_headers=["*"],  # Allows all headers
+)
 
 # ==========================================
 # 4. DATABASE HELPERS
@@ -104,6 +116,28 @@ def read_reviews():
     try:
         reviews = get_all_reviews_from_db()
         return reviews
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+
+@app.get("/reviews_count")
+def count_reviews():
+    """
+    Returns the total number of reviews in the database.
+    """
+    try:
+        conn = pyodbc.connect(DB_CONNECTION_STRING)
+        cursor = conn.cursor()
+        
+        # specific SQL query for counting rows efficiently
+        query = "SELECT COUNT(*) FROM dbo.process_reviews"
+        
+        cursor.execute(query)
+        count = cursor.fetchone()[0] # Gets the first column of the first row
+        
+        conn.close()
+        return {"total_reviews": count}
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

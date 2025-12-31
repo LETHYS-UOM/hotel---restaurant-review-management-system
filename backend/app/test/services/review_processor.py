@@ -1,17 +1,16 @@
-"""
-analyze_reviews_from_db.py
-Fetch reviews + photos from BookingScraper DB, send to Gemini,
-save cleaned JSON for the front-end, and store results in SQL.
-"""
 from __future__ import annotations
 import json
 import pathlib
 import re
 from dataclasses import dataclass, asdict
 from typing import List
+import os
+from dotenv import load_dotenv
 
 from google import genai
 import pyodbc
+
+load_dotenv()  # take environment variables from .env file
 
 # ------------------------------------------------------------------
 # Helpers
@@ -24,20 +23,21 @@ def strip_markdown_fences(text: str) -> str:
 
 # ------------------------------------------------------------------
 # 1. DB connection (same credentials as the scraper)
+
 # ------------------------------------------------------------------
 CONN_STR = (
-    "DRIVER={ODBC Driver 18 for SQL Server};"
-    "SERVER=178.128.84.124;"
-    "DATABASE=BookingScraper;"
-    "UID=sa;"
-    "PWD=Qwer3552;"
+    f"DRIVER={{{os.getenv('DB_DRIVER')}}};"
+    f"SERVER={os.getenv('DB_SERVER')};"
+    f"DATABASE={os.getenv('DB_NAME')};"
+    f"UID={os.getenv('DB_UID')};"
+    f"PWD={os.getenv('DB_PWD')};"
     "TrustServerCertificate=yes;"
 )
 
 # ------------------------------------------------------------------
 # 2. Gemini setup
 # ------------------------------------------------------------------
-GENAI_KEY = "AIzaSyBn7-MzYkqfjTSHTSr4ddb5KyPkJcfYc9A"
+GENAI_KEY = os.getenv("GENAI_KEY")
 client = genai.Client(api_key=GENAI_KEY, http_options={"api_version": "v1"})
 
 # ------------------------------------------------------------------

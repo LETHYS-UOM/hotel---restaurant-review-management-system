@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "rating": 5,
+    "userName": "Thava",
+    "text": "Such an amazing service we received from the resort. Customer service and water falls. Present climate",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Oct 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "rating": 4,
+    "userName": "Thava",
+    "text": "We all enjoy everything. Location",
+    "sentiment": "Positive",
+    "categories": [
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Sep 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 3,
+    "rating": 5,
+    "userName": "Bernhard",
+    "text": "Exceptional. The property itself is wonderful. Quiet and green spaces with a beautiful garden make it a calming environment.",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Sep 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 4,
+    "rating": 5,
+    "userName": "Hans",
+    "text": "Wonderful. Warm and friendly despite the formal appearanc at first. The staff and the watefall are amazing. Rooms could be cleaned a bit better. The management is quite open to feedback. We were invited to a homecoming of a wedding and to a small personell party. It was very nice and warming. Thank you, we had a great time. Do swim in the levels of the waterfall here. It is amazing. Room cleaning (to western standards) could be better.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Cleanliness",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Mar 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 5,
+    "rating": 5,
+    "userName": "becker",
+    "text": "good location good breakfasts and staff.room is very facilated very value for money.good location good breakfasts and staff.room is very facilated very value for money",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Food",
+      "Value"
+    ],
+    "source": "Booking.com",
+    "date": "Jan 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 6,
+    "rating": 5,
+    "userName": "Anouk",
+    "text": "Great place and staff! Location next to waterfall.",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2023",
+    "status": "Pending"
+  },
+  {
+    "id": 7,
+    "rating": 1,
+    "userName": "Chalith",
+    "text": "Horrible stay. Location was good & rooms are clean. Had a horrible experience due to a group of people were having a loud party with loud music and drinking from the time we arrived and late in to the night. The pool & pool area was not clean. Images of the surrounding is misleading.",
+    "sentiment": "Negative",
+    "categories": [
+      "Noise",
+      "Cleanliness",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Apr 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 8,
+    "rating": 3,
+    "userName": "Sadun",
+    "text": "Nice Location natural sound. Great Location. Very poor Wi-Fi connection.",
+    "sentiment": "Neutral",
+    "categories": [
+      "Location",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Apr 01, 2023",
+    "status": "Pending"
+  },
+  {
+    "id": 9,
+    "rating": 4,
+    "userName": "Deepika",
+    "text": "Very Good. Die Einrichtung von dem Appartment sehr schön und der Ausblick ist hervorragend. Das Personal war sehr freundlich und hilfsbereit. Ich kann es weiter empfehlen.",
+    "sentiment": "Positive",
+    "categories": [
+      "Comfort",
+      "Location",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "May 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 10,
+    "rating": 5,
+    "userName": "Olegrdtsc",
+    "text": "Exceptional. Завтрак на убой, очень сытный. Классный бассейн, красивый отель,на реке находится с видом на водопад. Все отл",
+    "sentiment": "Positive",
+    "categories": [
+      "Food",
+      "Facilities",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Jan 01, 2023",
+    "status": "Pending"
+  },
+  {
+    "id": 11,
+    "rating": 5,
+    "userName": "Ivan",
+    "text": "Wonderful. Чисто, очень хорошие номера, хороший бассейн официанты в ресторане постоянно путали блюда или забывали их вообще принести. но сама еда была вкусная, повара молодцы",
+    "sentiment": "Positive",
+    "categories": [
+      "Cleanliness",
+      "Facilities",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Jan 01, 2023",
+    "status": "Pending"
+  },
+  {
+    "id": 12,
+    "rating": 5,
+    "userName": "Igor",
+    "text": "Exceptional. Все хорошо, очень красивое место, доброжелательный персонал, вкусная еда. Номера чистые и комфортные. В общем хорошее место!",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Jan 01, 2023",
+    "status": "Pending"
+  },
+  {
+    "id": 13,
+    "rating": 5,
+    "userName": "Nuzuki",
+    "text": "Exceptional.",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Oct 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 14,
+    "rating": 5,
+    "userName": "Bauma",
+    "text": "Exceptional.",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Oct 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 15,
+    "rating": 5,
+    "userName": "Chathuranga",
+    "text": "Exceptional.",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Aug 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 16,
+    "rating": 4,
+    "userName": "Arjuna",
+    "text": "Good.",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Apr 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 17,
+    "rating": 5,
+    "userName": "Romald",
+    "text": "Exceptional.",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Jan 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 18,
+    "rating": 5,
+    "userName": "Maksim",
+    "text": "Wonderful.",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Jan 01, 2023",
+    "status": "Pending"
+  },
+  {
+    "id": 19,
+    "rating": 2,
+    "userName": "Janaka",
+    "text": "Poor.",
+    "sentiment": "Negative",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Apr 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 20,
+    "rating": 5,
+    "userName": "Christiaan",
+    "text": "Exceptional.",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Mar 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 21,
+    "rating": 5,
+    "userName": "Ekaterina",
+    "text": "Exceptional.",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Jan 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 22,
+    "rating": 5,
+    "userName": "Per",
+    "text": "Exceptional.",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Nov 01, 2023",
+    "status": "Pending"
+  },
+  {
+    "id": 23,
+    "rating": 5,
+    "userName": "Erika",
+    "text": "Exceptional.",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Mar 01, 2023",
+    "status": "Pending"
+  }
+]

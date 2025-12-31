@@ -12,6 +12,11 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 # --- connetion to Database ---
 import pyodbc
 
+import sys
+import os
+
+
+
 conn = pyodbc.connect(
     "DRIVER={ODBC Driver 18 for SQL Server};"
     "SERVER=178.128.84.124;"
@@ -110,7 +115,7 @@ all_reviews: List[Review] = []
 with sync_playwright() as p:
     # Launch with stealth mode to avoid detection
     browser = p.chromium.launch(
-        headless=True,
+        headless=False,
         args=['--disable-blink-features=AutomationControlled']
     )
 
@@ -374,7 +379,13 @@ with sync_playwright() as p:
 cursor.close()
 conn.close()
 
-from ..services import review_processor
+# 1. Add the 'backend' directory to Python's search path
+# This looks 3 levels up: scraping -> test -> app -> backend
+current_dir = os.path.dirname(os.path.abspath(__file__))
+backend_path = os.path.abspath(os.path.join(current_dir, '../'))
+sys.path.append(backend_path)
+
+from services import review_processor
 
 review_processor.main()
 print("✓ Review processing completed.")

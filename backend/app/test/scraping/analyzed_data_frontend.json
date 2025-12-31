@@ -2,97 +2,56 @@
   {
     "id": 1,
     "rating": 5,
-    "userName": "Thava",
-    "text": "Such an amazing service we received from the resort. Customer service and water falls. Present climate",
+    "userName": "Anthony",
+    "text": "Amazing view and outstanding staff! A beautiful find in the hills of Kandy. We had our room upgraded so we had a stunning view of Kandy. The staff were exceptional and available to help at any time for whatever we needed. Kalani, Sampath and Damitha were fantastic throughout our stay! Good location for the view but it is quite high up in the hills which was fine for us as it added to our trip. You’ll need a tuk tuk or car to get up and down but this is easily arranged. Kandy itself was lovely but the hotel made it! Can’t recommend this place enough!",
     "sentiment": "Positive",
     "categories": [
       "Staff",
-      "Facilities"
+      "Location",
+      "Comfort"
     ],
     "source": "Booking.com",
-    "date": "Oct 01, 2025",
+    "date": "Dec 01, 2025",
     "status": "Pending"
   },
   {
     "id": 2,
-    "rating": 4,
-    "userName": "Thava",
-    "text": "We all enjoy everything. Location",
+    "rating": 5,
+    "userName": "Sophie",
+    "text": "Very helpful hosts. Lovely room, view and pool. The hosts were all so helpful with finding us transport and helping with all our questions. It was nice staying in the hills outside of the main city, more peaceful.",
     "sentiment": "Positive",
     "categories": [
-      "Location"
+      "Staff",
+      "Location",
+      "Facilities"
     ],
     "source": "Booking.com",
-    "date": "Sep 01, 2025",
+    "date": "Aug 01, 2025",
     "status": "Pending"
   },
   {
     "id": 3,
     "rating": 5,
     "userName": "Bernhard",
-    "text": "Exceptional. The property itself is wonderful. Quiet and green spaces with a beautiful garden make it a calming environment.",
-    "sentiment": "Positive",
-    "categories": [
-      "Location",
-      "Comfort"
-    ],
-    "source": "Booking.com",
-    "date": "Sep 01, 2025",
-    "status": "Pending"
-  },
-  {
-    "id": 4,
-    "rating": 5,
-    "userName": "Hans",
-    "text": "Wonderful. Warm and friendly despite the formal appearanc at first. The staff and the watefall are amazing. Rooms could be cleaned a bit better. The management is quite open to feedback. We were invited to a homecoming of a wedding and to a small personell party. It was very nice and warming. Thank you, we had a great time. Do swim in the levels of the waterfall here. It is amazing. Room cleaning (to western standards) could be better.",
-    "sentiment": "Positive",
-    "categories": [
-      "Staff",
-      "Cleanliness",
-      "Facilities"
-    ],
-    "source": "Booking.com",
-    "date": "Mar 01, 2025",
-    "status": "Pending"
-  },
-  {
-    "id": 5,
-    "rating": 5,
-    "userName": "becker",
-    "text": "good location good breakfasts and staff.room is very facilated very value for money.good location good breakfasts and staff.room is very facilated very value for money",
-    "sentiment": "Positive",
-    "categories": [
-      "Location",
-      "Food",
-      "Value"
-    ],
-    "source": "Booking.com",
-    "date": "Jan 01, 2025",
-    "status": "Pending"
-  },
-  {
-    "id": 6,
-    "rating": 5,
-    "userName": "Anouk",
-    "text": "Great place and staff! Location next to waterfall.",
+    "text": "Great view. On the hill over Kandy - so the view was great, very nice staff",
     "sentiment": "Positive",
     "categories": [
       "Location",
       "Staff"
     ],
     "source": "Booking.com",
-    "date": "Feb 01, 2023",
+    "date": "Aug 01, 2025",
     "status": "Pending"
   },
   {
-    "id": 7,
-    "rating": 1,
-    "userName": "Chalith",
-    "text": "Horrible stay. Location was good & rooms are clean. Had a horrible experience due to a group of people were having a loud party with loud music and drinking from the time we arrived and late in to the night. The pool & pool area was not clean. Images of the surrounding is misleading.",
-    "sentiment": "Negative",
+    "id": 4,
+    "rating": 5,
+    "userName": "Maria",
+    "text": "Really recommend. Great experience. The staff make the difference. We arrived in the middle of sri lanka new year with bunch of tired hungry kids and the look after us. It is 10-15 min from kandy city center but handy to get to botanical gardens. Amazing views from the 4 floors villas rooms are big and comfortable. We had a great time",
+    "sentiment": "Positive",
     "categories": [
-      "Noise",
-      "Cleanliness",
+      "Staff",
+      "Comfort",
       "Location"
     ],
     "source": "Booking.com",
@@ -100,24 +59,40 @@
     "status": "Pending"
   },
   {
-    "id": 8,
-    "rating": 3,
-    "userName": "Sadun",
-    "text": "Nice Location natural sound. Great Location. Very poor Wi-Fi connection.",
-    "sentiment": "Neutral",
+    "id": 5,
+    "rating": 4,
+    "userName": "Lars",
+    "text": "Great view, outside the busy city. The hotel is located just outside the busy city life of Kandy. You can reach the city after a 10min drive. The road to the hotel is very steep. Keep in mind that not every Tuk Tuk driver is able to reach this. The breakfast was very good and very tasty. The room we had was super spacious and the terrace provided a great view! The bathroom had some humidity spots around the bath, which is not unprevebtable in this climate. The lady working at the reception was so friendly! She did everything she could for us. We want to thank her for a great stay.",
+    "sentiment": "Positive",
     "categories": [
       "Location",
-      "Facilities"
+      "Food",
+      "Staff"
     ],
     "source": "Booking.com",
-    "date": "Apr 01, 2023",
+    "date": "Mar 01, 2025",
     "status": "Pending"
   },
   {
-    "id": 9,
-    "rating": 4,
-    "userName": "Deepika",
-    "text": "Very Good. Die Einrichtung von dem Appartment sehr schön und der Ausblick ist hervorragend. Das Personal war sehr freundlich und hilfsbereit. Ich kann es weiter empfehlen.",
+    "id": 6,
+    "rating": 5,
+    "userName": "Ling",
+    "text": "Great stay. Very nice room beautifully decorated and super clean. Very good breakfast. The manager is very responsive and helpful",
+    "sentiment": "Positive",
+    "categories": [
+      "Comfort",
+      "Food",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 7,
+    "rating": 5,
+    "userName": "Kate",
+    "text": "Lovely room with great views, up a very steep hill overlooking Kandy. The hotel is lovely - spacious bedrooms with views down the mountain and Kalani the receptionist is so helpful. This hotel is up a REALLY steep hill, which makes it a bit inaccessible for walking to from Kandy, which had been our plan. Also no onsite restaurant so have to order a takeaway or get a tuk tuk into Kandy. Not really a problem though just adds to the adventure!",
     "sentiment": "Positive",
     "categories": [
       "Comfort",
@@ -125,147 +100,632 @@
       "Staff"
     ],
     "source": "Booking.com",
-    "date": "May 01, 2025",
+    "date": "Feb 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 8,
+    "rating": 4,
+    "userName": "De",
+    "text": "A quick overnight stay we didn’t really have time to utilise the facilities. Clean facility, balcony. Wifi didn’t work",
+    "sentiment": "Neutral",
+    "categories": [
+      "Cleanliness",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Jan 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 9,
+    "rating": 5,
+    "userName": "Charlotta",
+    "text": "Wonderful. The staff were so friendly and helpful and Kalani helped to book a dinner reservation in Kandy. The view was lovely. The only thing was getting down from the top of the hill to the reception, it would be helpful with a railing as it is quite steep.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Jan 01, 2025",
     "status": "Pending"
   },
   {
     "id": 10,
     "rating": 5,
-    "userName": "Olegrdtsc",
-    "text": "Exceptional. Завтрак на убой, очень сытный. Классный бассейн, красивый отель,на реке находится с видом на водопад. Все отл",
+    "userName": "Urvi",
+    "text": "Exceptional. Very helpful and lovely host, large rooms, and homely. Excellent Sri Lankan breakfast.",
     "sentiment": "Positive",
     "categories": [
-      "Food",
-      "Facilities",
-      "Location"
+      "Staff",
+      "Comfort",
+      "Food"
     ],
     "source": "Booking.com",
-    "date": "Jan 01, 2023",
+    "date": "Jan 01, 2025",
     "status": "Pending"
   },
   {
     "id": 11,
-    "rating": 5,
-    "userName": "Ivan",
-    "text": "Wonderful. Чисто, очень хорошие номера, хороший бассейн официанты в ресторане постоянно путали блюда или забывали их вообще принести. но сама еда была вкусная, повара молодцы",
+    "rating": 4,
+    "userName": "Zhixiu",
+    "text": "Best service ever. The girl at the reception was super sweet and helpful and went out of her way to provide assistance whenever she could. Our room was of a good size, clean and the shower stayed hot throughout, which was not always the case at other hotels we stayed at on the rest of our trip! Location was quite inconvenient as it was high up in the hills away from Kandy city centre. We arrived quite late in the evening and had to order food delivery as there was no onsite restaurant.",
     "sentiment": "Positive",
     "categories": [
-      "Cleanliness",
-      "Facilities",
-      "Food"
+      "Staff",
+      "Comfort",
+      "Location"
     ],
     "source": "Booking.com",
-    "date": "Jan 01, 2023",
+    "date": "Dec 01, 2024",
     "status": "Pending"
   },
   {
     "id": 12,
     "rating": 5,
-    "userName": "Igor",
-    "text": "Exceptional. Все хорошо, очень красивое место, доброжелательный персонал, вкусная еда. Номера чистые и комфортные. В общем хорошее место!",
+    "userName": "Olga",
+    "text": "Wonderful. Really nice view, very clean accommodation, good swimming pool. Very nice staff.",
     "sentiment": "Positive",
     "categories": [
       "Location",
-      "Staff",
-      "Food"
+      "Cleanliness",
+      "Facilities"
     ],
     "source": "Booking.com",
-    "date": "Jan 01, 2023",
+    "date": "Dec 01, 2024",
     "status": "Pending"
   },
   {
     "id": 13,
     "rating": 5,
-    "userName": "Nuzuki",
-    "text": "Exceptional.",
+    "userName": "Marisa",
+    "text": "Wonderful. Very helpful and friendly staff. Clean and comfortable. Nice pool (not heated but good enough). They provided driver accommodation FOC. There are reasonably sized fridges in the rooms so we could keep some breakfast food in them and eat it in the dining area. Although it says a restaurant is on the property, there isn't. And restaurants are a tuk tuk ride away.",
     "sentiment": "Positive",
-    "categories": [],
+    "categories": [
+      "Staff",
+      "Comfort",
+      "Facilities"
+    ],
     "source": "Booking.com",
-    "date": "Oct 01, 2025",
+    "date": "Sep 01, 2024",
     "status": "Pending"
   },
   {
     "id": 14,
     "rating": 5,
-    "userName": "Bauma",
-    "text": "Exceptional.",
+    "userName": "Asaf",
+    "text": "Exceptional. Amazing view, big rooms, ber nice staff",
     "sentiment": "Positive",
-    "categories": [],
+    "categories": [
+      "Location",
+      "Comfort",
+      "Staff"
+    ],
     "source": "Booking.com",
-    "date": "Oct 01, 2025",
+    "date": "Aug 01, 2024",
     "status": "Pending"
   },
   {
     "id": 15,
-    "rating": 5,
-    "userName": "Chathuranga",
-    "text": "Exceptional.",
+    "rating": 4,
+    "userName": "Robert",
+    "text": "Lovely spot up in the hills away from the hussle of kandy. Lovely welcome and very peaceful location. Room was clean and good sized. The pool was lovely albeit small. It’s too far to walk from Kandy but not too much to get a tuk tuk. Our host was really helpful and responsive to all our questions and booked us an onward taxi. The breakfast was a bit uninspiring and cold, the Sri Lankan breakfast was probably better than the English version!",
     "sentiment": "Positive",
-    "categories": [],
+    "categories": [
+      "Location",
+      "Comfort",
+      "Food"
+    ],
     "source": "Booking.com",
-    "date": "Aug 01, 2025",
+    "date": "Jul 01, 2024",
     "status": "Pending"
   },
   {
     "id": 16,
-    "rating": 4,
-    "userName": "Arjuna",
-    "text": "Good.",
+    "rating": 5,
+    "userName": "Schockaert",
+    "text": "Exceptional. We stayed here one night before we went back to the airport. The girl who arranges everything and sits in the lobby is really the sweetest. She helped us arrange the transfer to the airport and was so friendly. The hotel is really clean and has a beautiful view. It’s not located in the centre, but a 15min drive away. This didn’t matter to us since we just wanted to relax before going to the airport, and a tuktuk to the centre was quickly arranged.",
     "sentiment": "Positive",
-    "categories": [],
+    "categories": [
+      "Staff",
+      "Cleanliness",
+      "Location"
+    ],
     "source": "Booking.com",
-    "date": "Apr 01, 2025",
+    "date": "Jul 01, 2024",
     "status": "Pending"
   },
   {
     "id": 17,
     "rating": 5,
-    "userName": "Romald",
-    "text": "Exceptional.",
+    "userName": "Myra",
+    "text": "Exceptional. Before arrival I told the owner that it was by boyfriends birthday and the next day was our anniversary! When we arrived we got drinks but also a cake!! I didn’t ask for it, but they surprised him good! Very good service. When we thought it couldn’t get better, they got us flower with the breakfast! The service is very very good. They really want you to have the best experience. Also clean beautiful rooms with a nice view and very good shower. I would very much recommend you stay here while in Kandy.",
     "sentiment": "Positive",
-    "categories": [],
+    "categories": [
+      "Staff",
+      "Comfort",
+      "Cleanliness"
+    ],
     "source": "Booking.com",
-    "date": "Jan 01, 2025",
+    "date": "Mar 01, 2024",
     "status": "Pending"
   },
   {
     "id": 18,
     "rating": 5,
-    "userName": "Maksim",
-    "text": "Wonderful.",
+    "userName": "Kamal",
+    "text": "The most beautiful day of stayed in Kandy. Beautiful place to stay with a great location, clean rooms, beautiful swimming pool and friendly staff.",
     "sentiment": "Positive",
-    "categories": [],
+    "categories": [
+      "Location",
+      "Cleanliness",
+      "Facilities"
+    ],
     "source": "Booking.com",
-    "date": "Jan 01, 2023",
+    "date": "Feb 01, 2024",
     "status": "Pending"
   },
   {
     "id": 19,
-    "rating": 2,
-    "userName": "Janaka",
-    "text": "Poor.",
+    "rating": 5,
+    "userName": "Wanjun",
+    "text": "Good memory. Good environment, good air, enthusiastic staff",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 20,
+    "rating": 5,
+    "userName": "Kristen",
+    "text": "Beautiful villa in the hills. The property is beautiful! It's a big home with a shared dining room and living room. The rooms are huge with individual balconies and modern bathrooms. Views are incredible and the location is very peaceful. The pool was nice and it felt good to relax after a long month of travel. The host, Kalani, was wonderful and helped out with a special request. The only downside is also an upside - it's VERY high up on a hill. You definitely need a vehicle to get to town. On your way back to the hotel, your tuk-tuk/car-ride will be very steep so there will be moments where you'll feel like the vehicle won't make it up and you truly hope the tuk-tuks are 4-wheel drive (they are not). But, for this, you get unbeatable views and serenity.",
+    "sentiment": "Positive",
+    "categories": [
+      "Facilities",
+      "Location",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 21,
+    "rating": 5,
+    "userName": "Stine",
+    "text": "Stay here, it is really nice. Awesome people working there, great room, fantastic view and the breakfast is god. The location is a little away from restaurants and other things and the road up there is a little crazy. But the location is also the reason for the nice view so it is okay :)",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Comfort",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 22,
+    "rating": 5,
+    "userName": "Maazin",
+    "text": "Exceptional. We thoroughly enjoyed our two-night stay at this wonderful place. It's conveniently situated away from the bustling Kandy town yet easily accessible by car. The highlight was the spacious and comfortable room, and we cherished the sunset views from the balcony and the charming little pool. Originally booked for one night, we extended our stay to two, thanks to the courteous and helpful staff, particularly the receptionist. I'll certainly recommend this gem to all my friends. Can't complain, utter perfection.",
+    "sentiment": "Positive",
+    "categories": [
+      "Comfort",
+      "Location",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2023",
+    "status": "Pending"
+  },
+  {
+    "id": 23,
+    "rating": 5,
+    "userName": "Denis",
+    "text": "Exceptional. Very nice villa",
+    "sentiment": "Positive",
+    "categories": [
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Jan 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 24,
+    "rating": 5,
+    "userName": "Sandunika",
+    "text": "Roof top is better to stay. Superb breakfast. But difficult to reach the location by car due to extremely hilly road.",
+    "sentiment": "Positive",
+    "categories": [
+      "Food",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2023",
+    "status": "Pending"
+  },
+  {
+    "id": 25,
+    "rating": 4,
+    "userName": "Jennefer",
+    "text": "Very Good. Schone en nette kamer. Hotel is op een berg waardoor je waanzinnig uitzicht hebt. Ligplaatsen aan het zwembad en weinig zon bij zwembad",
+    "sentiment": "Positive",
+    "categories": [
+      "Cleanliness",
+      "Location",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 26,
+    "rating": 5,
+    "userName": "Julie",
+    "text": "Un joli lieu sans l'agitation du coeur de ville. Un accueil très chalereux de la part de Kalani. Le lieu est situé sur les hauteurs, offrant une superbe vue. La piscine est un agréable spot pour se rafraîchir, les chambres sont grandes et ultra propres. L'accès au lieu sur les hauteurs de Kandy est difficile. Notre chauffeur a eu peur de ne pas pouvoir monter et nous y avons laissé un peu de gomme des pneus. Une arrivée par un chemin secondaire rend l'hôtel plus accessible, il faut le préciser. Moins de difficulté en Tuktuk",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Location",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Aug 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 27,
+    "rating": 5,
+    "userName": "MMark",
+    "text": "Wonderful. Prachtige locatie. Comfortabele bedden. Zeer behulpzaam personeel. Ver weg van centrum. Heel hoog op de berg en daardoor moeilijker bereikbaar maar het uitzicht maakt dat meer dan goed.",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Comfort",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Aug 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 28,
+    "rating": 4,
+    "userName": "Isabelle",
+    "text": "Séjour de courte durée mais buffet varié et chambre agréable. Chambre spacieuse. Piscine",
+    "sentiment": "Positive",
+    "categories": [
+      "Comfort",
+      "Food",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Aug 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 29,
+    "rating": 5,
+    "userName": "Silvia",
+    "text": "Exceptional. L’accoglienza di tutte le persone dello staff e la vista dalla camera!",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Aug 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 30,
+    "rating": 5,
+    "userName": "Liane",
+    "text": "Exceptional. Prachtig hotel met een fantastisch uitzicht. Het is buiten de drukte, maar dat vonden wij heel prettig. Het personeel is super aardig en behulpzaam.",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Jul 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 31,
+    "rating": 5,
+    "userName": "Matthias",
+    "text": "Sehr gut. Top Aussicht und sehr nette Gastgeber. Schöner Infinity Pool und gutes Frühstück mit Omelette, Würstchen, Obst und Tee/Kaffee. Zufahrt etwas abenteuerlich mit dem eigenen Tuktuk, aber wäre sonst langweilig. Alles in allem Top",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Apr 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 32,
+    "rating": 5,
+    "userName": "Christian",
+    "text": "Moderne Unterkunft im Grünen mit herrlichen Ausblick auf Kandy. Diese Unterkunft bietet einen wunderschönen Blick auf Kandy und die Umgebung. Gute Kommunikation vor Ort, freundliches Personal und mitten in der Natur, traumhaft. Das Gebäude und die Einrichtung ist sehr modern. Der Pool bietet eine schöne Erfrischung. Das Frühstück war sehr lecker. alles war perfekt",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Mar 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 33,
+    "rating": 5,
+    "userName": "Jonas",
+    "text": "Exceptional. Ich hatte einen sehr schönen Aufenthalt In der Unterkunft. Das Personal ist äußerst zuvorkommend und ausgesprochen freundlich. Der Ausblick vom Balkon war wunderschön.. Ebenso ist das Frühstück sehr zu empfehlen, man kann zwischen Englischen und Sri lankischen Frühstück entscheiden. Die Lage der Unterkunft befindet sich ungefähr 10-15 Minuten mit dem Auto/ Tuk Tuk entfernt vom Stadtzentrum. Dadurch hat man in der Nacht keinen Straßenlärm. Das einzige was man hört, sind die Geräusche der Natur .. sehr idyllisch! Ich komme sehr gerne wieder!",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Location",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Mar 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 34,
+    "rating": 5,
+    "userName": "Sirine",
+    "text": "Parfait!! Très belle villa! Chambres spacieuses et lits confortables! Propre! Personnel au top!! Une mention spéciale pour Kalani qui était au petit soin, Très gentille et serviable! Toujours avec le sourire 😍😍 Je recommande! Rien, Mais l’ajout de quelques équipements comme un sèche cheveux et plus de transat à côté de la piscine serait un avantage ☺️",
+    "sentiment": "Positive",
+    "categories": [
+      "Comfort",
+      "Staff",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 35,
+    "rating": 5,
+    "userName": "Magdalena",
+    "text": "Sehr sehr sauber, schön, das Zimmer hat sehr gut gerochen, sehr gemütliches Bett, Pool war angenehm, schöne Aussicht, Pe. Sehr sehr sauber, schön, das Zimmer hat sehr gut gerochen, sehr gemütliches Bett, Pool war angenehm, schöne Aussicht, Personal war sehr freundlich, außer der Security Mann, der uns kein einziges Mal beachtet und gegrüßt hat. Sehr empfehlenswert und das Frühstück war auch gut (English breakfast)",
+    "sentiment": "Positive",
+    "categories": [
+      "Cleanliness",
+      "Comfort",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 36,
+    "rating": 5,
+    "userName": "Suzy",
+    "text": "Wonderful. Aardig personeel, rustig gelegen, fijne huiskamer met heerlijke bank. Fijn balkon met zitje. Kamer rook erg naar schoonmaakmiddel. Ligt stukje buiten centrum, op een berg met steile smalle weg en daardoor moeilijk bereikbaar. Lokatie via booking klopt niet. 500 meter verschil.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Location",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 37,
+    "rating": 5,
+    "userName": "Sandra",
+    "text": "Een prachtige hotel met een schitterend uitzicht op Kandy. Prachtig hotel met een waanzinnig mooi uitzicht op de bergen, vooral vanaf het dakterras. We kregen een gratis kamer upgrade, luxer en mooier uitzicht. Heerlijk bed en douche en mooie ruime kamer. Fijn zwembad… Het personeel is supervriendelijk en behulpzaam, ze regelen vervoer naar het Kandy en je kunt ze van alles vragen. Het ligt wel iets verder van het centrum vandaan maar je bent er zo met een tuktuk.",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Comfort",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Sep 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 38,
+    "rating": 5,
+    "userName": "Miriska",
+    "text": "Exceptional. De aardige gastvrouw die voor ons zelfs nog een tasje die wij hadden laten liggen weer bij ons terecht kwam. Ook zijn de kamers ruim en schoon. Is de ligging prachtig en is er een heerlijk zwembad.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Comfort",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Jul 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 39,
+    "rating": 5,
+    "userName": "Ana",
+    "text": "Personal maravilloso y excelentes vistas. El personal fue maravilloso (Kalani y Damitha). Muy atentos y serviciales. Siempre con una sonrisa. Nos ayudaron en todo. El desayuno muy completo y recién hecho. La carretera para llegar hasta el hotel es bastante estrecha y empinada pero las vistas lo merecen.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Location",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Aug 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 40,
+    "rating": 4,
+    "userName": "Елена",
+    "text": "В целом все очень хорошо учитывая местоположение объекта, мне понравилось, место очень запоминающееся. Чистота, красивое место на горе, уютные номера, приветливый персонал. Перебои с водой. Было в номере джакузи, но мы им не смогли воспользоваться так как горячая вода практически отсутствовала, сам джакузи не держал пробку слива",
+    "sentiment": "Positive",
+    "categories": [
+      "Cleanliness",
+      "Location",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Apr 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 41,
+    "rating": 4,
+    "userName": "CCaroline",
+    "text": "Very Good. confort des chambres . le manque de service proposé. Pas de boisson au bar, pas de bouteille ni verre à disposition. Il fallait demander à chaque fois. Nettoyage de la piscine à un moment inopportun.",
+    "sentiment": "Neutral",
+    "categories": [
+      "Comfort",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Apr 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 42,
+    "rating": 5,
+    "userName": "Reinhard",
+    "text": "Exceptional. Schönes grosses Zimmer mit Terrasse von der man einen super Ausblick auf Kandy hat. Das Personal ist super u. freundlich. Ein Tuktuk wurde für uns organisiert ( für den ganzen Tag mit Fahrer 4000 Srp) und wir waren auch während unseres Ausflugs zum Zahntempel u. zum Botanischen Garten immer im Kontakt miteinander. Es ist doch etwas abgelegenen u. man ist auf ein Fahrzeug angewiesen. Die Einfahrt ist sehr steil.",
+    "sentiment": "Positive",
+    "categories": [
+      "Comfort",
+      "Staff",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 43,
+    "rating": 4,
+    "userName": "Xavier",
+    "text": "Good. La vue exceptionnelle. Manque d'équipement (il faut demander une couverture, pas de lampes de chevet, piscine non chauffée). Petit déjeuner avec produits de qualité très moyenne. Il ne faut pas dépenser plus de 60 euros dans cette prestation qui nous a coûté 93 euros",
+    "sentiment": "Neutral",
+    "categories": [
+      "Location",
+      "Facilities",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Jan 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 44,
+    "rating": 4,
+    "userName": "Moine",
+    "text": "Good. Grande suite avec beau panorama depuis la terrasse privative. Emplacement très calme. Suite avec baignoire, qui n'est pas fonctionnelle (remous cassés, pas d'eau chaude pour la remplir). Prestations insuffisantes pour le prix : pas de suggestions d'activité, pas de service de laverie Petit déjeuner anglais décevant",
+    "sentiment": "Neutral",
+    "categories": [
+      "Comfort",
+      "Location",
+      "Value"
+    ],
+    "source": "Booking.com",
+    "date": "Jan 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 45,
+    "rating": 4,
+    "userName": "AAnonymous",
+    "text": "الاطلالة جميلة ،، الطريق الى الفندق سيء. الاطلاله جميله. الطريق الى الفندق سيء",
+    "sentiment": "Neutral",
+    "categories": [
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Sep 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 46,
+    "rating": 3,
+    "userName": "AAnonymous",
+    "text": "Zimmer und Personal gut, Rest so la la. Das Zimmer. Pool war nicht sauber und das Frühstück für 7 USD liess zu wünschen übrig. (Keine Butter und Marmelade, kein Kräutertee.",
     "sentiment": "Negative",
+    "categories": [
+      "Facilities",
+      "Food",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Aug 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 47,
+    "rating": 5,
+    "userName": "Anya",
+    "text": "Wonderful. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 48,
+    "rating": 5,
+    "userName": "Malcolm",
+    "text": "Wonderful. There are no comments available for this review",
+    "sentiment": "Positive",
     "categories": [],
     "source": "Booking.com",
     "date": "Apr 01, 2025",
     "status": "Pending"
   },
   {
-    "id": 20,
-    "rating": 5,
-    "userName": "Christiaan",
-    "text": "Exceptional.",
+    "id": 49,
+    "rating": 4,
+    "userName": "Schwenn",
+    "text": "Very Good. There are no comments available for this review",
     "sentiment": "Positive",
     "categories": [],
     "source": "Booking.com",
-    "date": "Mar 01, 2025",
+    "date": "Aug 01, 2024",
     "status": "Pending"
   },
   {
-    "id": 21,
+    "id": 50,
     "rating": 5,
-    "userName": "Ekaterina",
-    "text": "Exceptional.",
+    "userName": "Dina",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Feb 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 51,
+    "rating": 4,
+    "userName": "Aous",
+    "text": "Good. There are no comments available for this review",
     "sentiment": "Positive",
     "categories": [],
     "source": "Booking.com",
@@ -273,25 +733,157 @@
     "status": "Pending"
   },
   {
-    "id": 22,
-    "rating": 5,
-    "userName": "Per",
-    "text": "Exceptional.",
-    "sentiment": "Positive",
+    "id": 52,
+    "rating": 3,
+    "userName": "Monika",
+    "text": "Pleasant. There are no comments available for this review",
+    "sentiment": "Neutral",
     "categories": [],
     "source": "Booking.com",
-    "date": "Nov 01, 2023",
+    "date": "Dec 01, 2024",
     "status": "Pending"
   },
   {
-    "id": 23,
-    "rating": 5,
-    "userName": "Erika",
-    "text": "Exceptional.",
+    "id": 53,
+    "rating": 4,
+    "userName": "Chris",
+    "text": "Good. There are no comments available for this review",
     "sentiment": "Positive",
     "categories": [],
     "source": "Booking.com",
-    "date": "Mar 01, 2023",
+    "date": "Nov 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 54,
+    "rating": 5,
+    "userName": "Sabina",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 55,
+    "rating": 4,
+    "userName": "Lea",
+    "text": "Very Good. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Sep 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 56,
+    "rating": 5,
+    "userName": "David",
+    "text": "Wonderful. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Jan 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 57,
+    "rating": 5,
+    "userName": "Sven",
+    "text": "Wonderful. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Jan 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 58,
+    "rating": 5,
+    "userName": "Moritz",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Dec 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 59,
+    "rating": 5,
+    "userName": "Clemence",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Nov 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 60,
+    "rating": 5,
+    "userName": "Dorothee",
+    "text": "superbe hotel sur les hauteurs de Kandy et une manager au top! merci pour tout !! There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Aug 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 61,
+    "rating": 5,
+    "userName": "Johannes",
+    "text": "Sehr nette Gastgeber und schöne Unterkunft mit tollem Pool. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Jul 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 62,
+    "rating": 5,
+    "userName": "Bartosz",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Mar 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 63,
+    "rating": 5,
+    "userName": "Sajinthan",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Feb 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 64,
+    "rating": 5,
+    "userName": "Malysse",
+    "text": "Toplocatie en uitzonderlijk vriendelijk personeel en uiterst net. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Feb 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 65,
+    "rating": 4,
+    "userName": "Emilie",
+    "text": "Good. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Aug 01, 2024",
     "status": "Pending"
   }
 ]

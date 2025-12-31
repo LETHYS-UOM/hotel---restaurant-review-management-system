@@ -14,18 +14,20 @@ import pyodbc
 
 import sys
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
-
-conn = pyodbc.connect(
-    "DRIVER={ODBC Driver 18 for SQL Server};"
-    "SERVER=178.128.84.124;"
-    "DATABASE=BookingScraper;"
-    "UID=sa;"
-    "PWD=Qwer3552;"
+CONN_STR = (
+    f"DRIVER={{{os.getenv('DB_DRIVER')}}};"
+    f"SERVER={os.getenv('DB_SERVER')};"
+    f"DATABASE={os.getenv('DB_NAME')};"
+    f"UID={os.getenv('DB_UID')};"
+    f"PWD={os.getenv('DB_PWD')};"
     "TrustServerCertificate=yes;"
 )
 
+conn = pyodbc.connect(CONN_STR)
 cursor = conn.cursor()
 
 

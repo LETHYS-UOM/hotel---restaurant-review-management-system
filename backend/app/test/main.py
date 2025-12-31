@@ -1,6 +1,115 @@
-from fastapi import FastAPI
-from routers import reviews
+import json
+import pyodbc
+import uvicorn
+from typing import List, Optional
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+import os
+from dotenv import load_dotenv
 
-app = FastAPI(title="Hotel Review API")
+load_dotenv()  # Load environment variables from .env file
+# ==========================================
+# 1. CONFIGURATION
+# ==========================================
+# REPLACE with your specific connection details
+DB_CONNECTION_STRING = (
+    f"DRIVER={{{os.getenv('DB_DRIVER')}}};"
+    f"SERVER={os.getenv('DB_SERVER')};"
+    f"DATABASE={os.getenv('DB_NAME')};"
+    f"UID={os.getenv('DB_UID')};"
+    f"PWD={os.getenv('DB_PWD')};"
+    "TrustServerCertificate=yes;"
+)
 
-app.include_router(reviews.router)
+# ==========================================
+# 2. DATA MODELS (Pydantic)
+# ==========================================
+class ReviewModel(BaseModel):
+    id: int
+    rating: float
+    userName: str
+    text: Optional[str] = None
+    sentiment: str
+    categories: List[str]  # API returns this as a real list ["Food", "Service"]
+    source: str
+    date: str
+    status: str
+
+# ==========================================
+# 3. APP INITIALIZATION
+# ==========================================
+app = FastAPI(title="Review Management API")
+
+# ==========================================
+# 4. DATABASE HELPERS
+# ==========================================
+def get_all_reviews_from_db():
+    try:
+        conn = pyodbc.connect(DB_CONNECTION_STRING)
+        cursor = conn.cursor()
+        
+        # We use [brackets] for reserved keywords like date/status
+        query = """
+            SELECT id, rating, userName, text, sentiment, 
+                   categories, source, [date], [status]
+            FROM dbo.process_reviews
+        """
+        
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        
+        results = []
+        for row in rows:
+            # PARSING LOGIC:
+            # The DB stores categories as a string: '["Food", "Cleanliness"]'
+            # We must convert it back to a Python list using json.loads
+            try:
+                cat_list = json.loads(row.categories) if row.categories else []
+            except json.JSONDecodeError:
+                cat_list = [] # Safety fallback if DB data is corrupt
+
+            results.append({
+                "id": row.id,
+                "rating": row.rating,
+                "userName": row.userName,
+                "text": row.text,
+                "sentiment": row.sentiment,
+                "categories": cat_list,
+                "source": row.source,
+                "date": row.date,
+                "status": row.status
+            })
+            
+        conn.close()
+        return results
+
+    except Exception as e:
+        print(f"Database Error: {e}")
+        raise e
+
+# ==========================================
+# 5. API ROUTES
+# ==========================================
+
+@app.get("/")
+def read_root():
+    return {"status": "Active", "message": "Visit /docs to see the API"}
+
+@app.get("/reviews", response_model=List[ReviewModel])
+def read_reviews():
+    """
+    Fetch all processed reviews from the database.
+    Converts stored JSON strings back into arrays.
+    """
+    try:
+        reviews = get_all_reviews_from_db()
+        return reviews
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+# ==========================================
+# 6. RUNNER
+# ==========================================
+if __name__ == "__main__":
+    # Runs the server on localhost:8000
+    uvicorn.run(app, host="127.0.0.1", port=8000)

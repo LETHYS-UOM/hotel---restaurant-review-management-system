@@ -28,6 +28,11 @@ const ReviewList = () => {
       lastUpdated: 'November 16, 2025 at 05:30 AM',
       scrapedAt: 'November 15, 2025 at 08:52 PM',
       hasReply: 'Yes',
+      images: [
+        { id: 1, url: '', alt: 'Hotel room view' },
+        { id: 2, url: '', alt: 'Breakfast buffet' },
+        { id: 3, url: '', alt: 'Hotel lobby' },
+      ],
     },
     {
       id: 'REV-002',
@@ -50,6 +55,10 @@ const ReviewList = () => {
       lastUpdated: 'November 14, 2025 at 10:15 PM',
       scrapedAt: 'November 14, 2025 at 11:30 PM',
       hasReply: 'No',
+      images: [
+        { id: 1, url: '', alt: 'Room issue 1' },
+        { id: 2, url: '', alt: 'Room issue 2' },
+      ],
     },
     {
       id: 'REV-003',

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Sidebar from './components/SideBar';
 import ReviewsPage from './pages/ReviewsPage';
 import DashboardPage from './pages/DashboardPage';
@@ -12,42 +12,60 @@ import ChooseSchedulePage from './pages/ChooseSchedulePage';
 import FinishSetupPage from './pages/FinishSetupPage';
 import './App.css';
 
-function App() {
+// Wrapper component to handle location changes
+const AppContent = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const location = useLocation();
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  // Close sidebar when route changes
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [location.pathname]);
+
+  // Close sidebar when route changes
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [location.pathname]);
+
+  return (
+    <Routes>
+      {/* Auth routes - standalone without sidebar */}
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/setup" element={<SetupPage />} />
+      <Route path="/setup/sources" element={<AddSourcesPage />} />
+      <Route path="/setup/schedule" element={<ChooseSchedulePage />} />
+      <Route path="/setup/finish" element={<FinishSetupPage />} />
+      
+      {/* Main app routes with sidebar */}
+      <Route
+        path="/*"
+        element={
+          <div className="app-container">
+            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+            <main className="main-content">
+              <Routes>
+                <Route path="/" element={<Navigate to="/dashboard" replace />} />
+                <Route path="/dashboard" element={<DashboardPage toggleSidebar={toggleSidebar} />} />
+                <Route path="/reviews" element={<ReviewsPage toggleSidebar={toggleSidebar} />} />
+                <Route path="/sources" element={<ReviewSourcesPage toggleSidebar={toggleSidebar} />} />
+              </Routes>
+            </main>
+          </div>
+        }
+      />
+    </Routes>
+  );
+};
+
+function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Auth routes - standalone without sidebar */}
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/setup" element={<SetupPage />} />
-        <Route path="/setup/sources" element={<AddSourcesPage />} />
-        <Route path="/setup/schedule" element={<ChooseSchedulePage />} />
-        <Route path="/setup/finish" element={<FinishSetupPage />} />
-        
-        {/* Main app routes with sidebar */}
-        <Route
-          path="/*"
-          element={
-            <div className="app-container">
-              <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-              <main className="main-content">
-                <Routes>
-                  <Route path="/" element={<Navigate to="/dashboard" replace />} />
-                  <Route path="/dashboard" element={<DashboardPage toggleSidebar={toggleSidebar} />} />
-                  <Route path="/reviews" element={<ReviewsPage toggleSidebar={toggleSidebar} />} />
-                  <Route path="/sources" element={<ReviewSourcesPage toggleSidebar={toggleSidebar} />} />
-                </Routes>
-              </main>
-            </div>
-          }
-        />
-      </Routes>
+      <AppContent />
     </BrowserRouter>
   );
 }

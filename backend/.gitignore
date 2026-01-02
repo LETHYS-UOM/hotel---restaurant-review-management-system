@@ -1,0 +1,9 @@
+\venv
+/app/test/scraping/screenshots
+/app/test/scraping/BookingOutput
+__pycache__/
+*.pyc
+instance/
+.env
+/app/test/services/analyzed_data_frontend.json
+/app/test/services/promptForFrontender.txt

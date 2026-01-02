@@ -18,8 +18,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 #------------------------------------------------------------------
-from ..services import review_processor
-review_processor.main()
+# from services import review_processor
+# review_processor.main()
 #------------------------------------------------------------------
 
 

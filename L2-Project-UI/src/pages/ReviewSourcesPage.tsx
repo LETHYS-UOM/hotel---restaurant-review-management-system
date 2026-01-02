@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { Plus } from 'lucide-react';
+import { Plus, Menu } from 'lucide-react';
 import SourcesTable from '../components/SourcesTable';
 import AddSourceModal from '../components/AddSourceModal';
 import EditSourceModal from '../components/EditSourceModal';
+
+interface ReviewSourcesPageProps {
+  toggleSidebar: () => void;
+}
 
 const styles = {
   sourcesPage: {
@@ -16,6 +20,24 @@ const styles = {
     alignItems: 'flex-start',
     marginBottom: '32px',
   },
+  headerLeft: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '16px',
+    flex: 1,
+  } as React.CSSProperties,
+  menuBtn: {
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    color: '#6b7280',
+    padding: '8px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '6px',
+    transition: 'background-color 0.2s',
+  } as React.CSSProperties,
   headerContent: {
     flex: 1,
   },
@@ -46,7 +68,7 @@ const styles = {
   },
 };
 
-const ReviewSourcesPage = () => {
+const ReviewSourcesPage: React.FC<ReviewSourcesPageProps> = ({ toggleSidebar }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [selectedSource, setSelectedSource] = useState<any>(null);
@@ -124,9 +146,20 @@ const ReviewSourcesPage = () => {
     <div style={styles.sourcesPage}>
       {/* Header */}
       <div style={styles.sourcesHeader}>
-        <div style={styles.headerContent}>
-          <h1 style={styles.pageTitle}>Review Sources</h1>
-          <p style={styles.pageSubtitle}>Manage your connected review platforms</p>
+        <div style={styles.headerLeft}>
+          <button 
+            style={styles.menuBtn}
+            onClick={toggleSidebar}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+            className="menu-btn-hover"
+          >
+            <Menu size={24} />
+          </button>
+          <div style={styles.headerContent}>
+            <h1 style={styles.pageTitle}>Review Sources</h1>
+            <p style={styles.pageSubtitle}>Manage your connected review platforms</p>
+          </div>
         </div>
         <button 
           style={styles.addSourceBtn}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/SideBar';
 import ReviewsPage from './pages/ReviewsPage';
@@ -13,6 +13,12 @@ import FinishSetupPage from './pages/FinishSetupPage';
 import './App.css';
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <BrowserRouter>
       <Routes>
@@ -29,13 +35,13 @@ function App() {
           path="/*"
           element={
             <div className="app-container">
-              <Sidebar />
+              <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
               <main className="main-content">
                 <Routes>
                   <Route path="/" element={<Navigate to="/dashboard" replace />} />
-                  <Route path="/dashboard" element={<DashboardPage />} />
-                  <Route path="/reviews" element={<ReviewsPage />} />
-                  <Route path="/sources" element={<ReviewSourcesPage />} />
+                  <Route path="/dashboard" element={<DashboardPage toggleSidebar={toggleSidebar} />} />
+                  <Route path="/reviews" element={<ReviewsPage toggleSidebar={toggleSidebar} />} />
+                  <Route path="/sources" element={<ReviewSourcesPage toggleSidebar={toggleSidebar} />} />
                 </Routes>
               </main>
             </div>

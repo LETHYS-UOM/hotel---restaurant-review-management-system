@@ -12,6 +12,7 @@
   flex-direction: column;
   background-color: #f9fafb;
   overflow-y: auto;
+  width: 100%;
 }
 
 .content-area {

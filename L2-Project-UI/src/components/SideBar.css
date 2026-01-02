@@ -8,8 +8,37 @@
   flex-direction: column;
   font-family: 'Inter', sans-serif;
   color: #4b5563;
-  /* Prevent the main container from scrolling, we only want the menu part to scroll */
-  overflow: hidden; 
+  overflow: hidden;
+  position: fixed;
+  left: -260px;
+  top: 0;
+  z-index: 1000;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar.sidebar-open {
+  left: 0;
+}
+
+/* Overlay for all screen sizes */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* 1. Header Styles (Fixed at top) */
@@ -53,11 +82,21 @@
   color: #9ca3af;
 }
 
-.collapse-btn {
+.close-btn {
   background: none;
   border: none;
   cursor: pointer;
   color: #9ca3af;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #f3f4f6;
 }
 
 /* 2. Menu Styles (The Scrollable Part) */

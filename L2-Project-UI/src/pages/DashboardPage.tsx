@@ -12,11 +12,15 @@ import ReviewSources from '../components/ReviewSources.tsx';
 import { Star, Link2, MessageSquare, Frown } from 'lucide-react';
 import '../App.css';
 
-const DashboardPage = () => {
+interface DashboardPageProps {
+  toggleSidebar: () => void;
+}
+
+const DashboardPage: React.FC<DashboardPageProps> = ({ toggleSidebar }) => {
   return (
     <>
       {/* Header */}
-      <DashboardHeader />
+      <DashboardHeader onMenuClick={toggleSidebar} />
 
       {/* Content Area */}
       <div className="content-area">

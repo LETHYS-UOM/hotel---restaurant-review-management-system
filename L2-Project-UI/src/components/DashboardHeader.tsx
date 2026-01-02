@@ -1,12 +1,21 @@
-import { Bell, CalendarDays } from 'lucide-react';
+import { Bell, CalendarDays, Menu } from 'lucide-react';
 import './DashboardHeader.css';
 
-const DashboardHeader = () => {
+interface DashboardHeaderProps {
+  onMenuClick?: () => void;
+}
+
+const DashboardHeader: React.FC<DashboardHeaderProps> = ({ onMenuClick }) => {
   return (
     <header className="dashboard-header">
       <div className="header-left">
-        <h1 className="hotel-title">Grand Plaza Hotel</h1>
-        <p className="hotel-subtitle">Review Management Dashboard</p>
+        <button className="menu-btn" onClick={onMenuClick}>
+          <Menu size={24} />
+        </button>
+        <div>
+          <h1 className="hotel-title">Grand Plaza Hotel</h1>
+          <p className="hotel-subtitle">Review Management Dashboard</p>
+        </div>
       </div>
 
       <div className="header-right">

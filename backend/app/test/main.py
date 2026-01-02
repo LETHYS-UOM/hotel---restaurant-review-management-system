@@ -1,22 +1,22 @@
 import json
 import pyodbc
 import uvicorn
-from typing import List, Optional
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 import os
+import datetime  # Import the whole module to avoid naming conflicts
+from typing import List, Optional
 from dotenv import load_dotenv
+
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
+load_dotenv()  # Load environment variables
 
-
-load_dotenv()  # Load environment variables from .env file
 # ==========================================
 # 1. CONFIGURATION
 # ==========================================
-# REPLACE with your specific connection details
 DB_CONNECTION_STRING = (
-    f"DRIVER={{{os.getenv('DB_DRIVER')}}};"
+    f"DRIVER={{{os.getenv('DB_DRIVER', 'ODBC Driver 17 for SQL Server')}}};"
     f"SERVER={os.getenv('DB_SERVER')};"
     f"DATABASE={os.getenv('DB_NAME')};"
     f"UID={os.getenv('DB_UID')};"
@@ -27,29 +27,48 @@ DB_CONNECTION_STRING = (
 # ==========================================
 # 2. DATA MODELS (Pydantic)
 # ==========================================
+
+class PhotoModel(BaseModel):
+    src: str
+    alt: str = ""
+
 class ReviewModel(BaseModel):
-    id: int
-    rating: float
+    id: str
+    platformReviewId: Optional[str] = None
+    rating: int
     userName: str
+    reviewerName: Optional[str] = None
     text: Optional[str] = None
+    summary: Optional[str] = None
     sentiment: str
-    categories: List[str]  # API returns this as a real list ["Food", "Service"]
+    language: Optional[str] = "English"
+    
+    # Lists
+    categories: List[str] = []
+    keyPhrases: List[str] = []
+    photos: List[PhotoModel] = []
+    
     source: str
-    date: str
+    
+    # FIXED: Explicitly use datetime.date to avoid conflict with the field name "date"
+    date: Optional[datetime.date] = None 
+    
+    # Status flags
     status: str
+    replyStatus: Optional[str] = "Pending"
+    hasReply: Optional[str] = "No"
 
 # ==========================================
 # 3. APP INITIALIZATION
 # ==========================================
 app = FastAPI(title="Review Management API")
 
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins (React, etc.) to connect
+    allow_origins=["*"], 
     allow_credentials=True,
-    allow_methods=["*"],  # Allows GET, POST, PUT, DELETE, etc.
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"], 
+    allow_headers=["*"], 
 )
 
 # ==========================================
@@ -59,45 +78,83 @@ def get_all_reviews_from_db():
     try:
         conn = pyodbc.connect(DB_CONNECTION_STRING)
         cursor = conn.cursor()
-        
-        # We use [brackets] for reserved keywords like date/status
-        query = """
-            SELECT id, rating, userName, text, sentiment, 
-                   categories, source, [date], [status]
-            FROM dbo.process_reviews
+
+        # 1. Fetch the PROCESSED data
+        sql_reviews = """
+            SELECT 
+                id, platformReviewId, rating, userName, reviewerName,
+                reviewText, summary, sentiment, language, categories, 
+                keyPhrases, reviewDate, status, replyStatus, hasReply, source
+            FROM dbo.ProcessedReviews
         """
+        rows = cursor.execute(sql_reviews).fetchall()
         
-        cursor.execute(query)
-        rows = cursor.fetchall()
+        # 2. Fetch Photos (Link via platformReviewId -> raw review_id)
+        original_ids = []
+        id_map = {} # Maps original_int_id -> new_system_id (REV-XXX)
         
+        for r in rows:
+            try:
+                # Extract ID from "BK-101" -> 101
+                if r.platformReviewId and "-" in r.platformReviewId:
+                    orig_id = int(r.platformReviewId.split('-')[1])
+                    original_ids.append(orig_id)
+                    id_map[orig_id] = r.id
+            except (ValueError, IndexError):
+                continue
+
+        # Bulk fetch photos
+        photo_map = {}
+        if original_ids:
+            placeholders = ','.join('?' * len(original_ids))
+            sql_photos = f"SELECT review_id, src, alt FROM review_photos WHERE review_id IN ({placeholders})"
+            pics = cursor.execute(sql_photos, original_ids).fetchall()
+            
+            for pid, src, alt in pics:
+                sys_id = id_map.get(pid)
+                if sys_id:
+                    photo_map.setdefault(sys_id, []).append({"src": src, "alt": alt})
+
+        # 3. Build the Result List
         results = []
         for row in rows:
-            # PARSING LOGIC:
-            # The DB stores categories as a string: '["Food", "Cleanliness"]'
-            # We must convert it back to a Python list using json.loads
+            # Parse JSON Lists
             try:
                 cat_list = json.loads(row.categories) if row.categories else []
             except json.JSONDecodeError:
-                cat_list = [] # Safety fallback if DB data is corrupt
+                cat_list = []
+
+            try:
+                phrase_list = json.loads(row.keyPhrases) if row.keyPhrases else []
+            except json.JSONDecodeError:
+                phrase_list = []
 
             results.append({
                 "id": row.id,
-                "rating": row.rating,
-                "userName": row.userName,
-                "text": row.text,
+                "platformReviewId": row.platformReviewId,
+                "rating": row.rating or 0,
+                "userName": row.userName or "Anonymous",
+                "reviewerName": row.reviewerName,
+                "text": row.reviewText, 
+                "summary": row.summary,
                 "sentiment": row.sentiment,
+                "language": row.language,
                 "categories": cat_list,
+                "keyPhrases": phrase_list,
+                "date": row.reviewDate, 
+                "status": row.status,
+                "replyStatus": row.replyStatus,
+                "hasReply": row.hasReply,
                 "source": row.source,
-                "date": row.date,
-                "status": row.status
+                "photos": photo_map.get(row.id, []) 
             })
-            
+
         conn.close()
         return results
 
     except Exception as e:
         print(f"Database Error: {e}")
-        raise e
+        raise e 
 
 # ==========================================
 # 5. API ROUTES
@@ -111,14 +168,14 @@ def read_root():
 def read_reviews():
     """
     Fetch all processed reviews from the database.
-    Converts stored JSON strings back into arrays.
     """
     try:
         reviews = get_all_reviews_from_db()
         return reviews
     except Exception as e:
+        # Log the full error to console for debugging
+        print(f"API Error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
-    
 
 @app.get("/reviews_count")
 def count_reviews():
@@ -128,13 +185,13 @@ def count_reviews():
     try:
         conn = pyodbc.connect(DB_CONNECTION_STRING)
         cursor = conn.cursor()
-        
-        # specific SQL query for counting rows efficiently
-        query = "SELECT COUNT(*) FROM dbo.process_reviews"
-        
+
+        # FIXED: Updated table name to dbo.ProcessedReviews
+        query = "SELECT COUNT(*) FROM dbo.ProcessedReviews"
+
         cursor.execute(query)
-        count = cursor.fetchone()[0] # Gets the first column of the first row
-        
+        count = cursor.fetchone()[0] 
+
         conn.close()
         return {"total_reviews": count}
 
@@ -145,5 +202,4 @@ def count_reviews():
 # 6. RUNNER
 # ==========================================
 if __name__ == "__main__":
-    # Runs the server on localhost:8000
     uvicorn.run(app, host="127.0.0.1", port=8000)

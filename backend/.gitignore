@@ -7,3 +7,5 @@ instance/
 .env
 /app/test/services/analyzed_data_frontend.json
 /app/test/services/promptForFrontender.txt
+/app/test/services/promt.txt 
+/app/test/services/raw_reviews.txt 

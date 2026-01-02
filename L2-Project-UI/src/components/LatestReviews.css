@@ -26,13 +26,17 @@
 }
 
 .review-item {
-  padding-top: 16px;
-  border-top: 1px solid #f3f4f6;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
-.review-item:first-child {
-  padding-top: 0;
-  border-top: none;
+.review-item:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+  transform: translateY(-2px);
 }
 
 .review-stars {

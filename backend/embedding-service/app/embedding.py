@@ -1,11 +1,22 @@
 import os
-import google.generativeai as genai
+import time
+from google import genai
+from google.api_core.exceptions import ResourceExhausted
 
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
-def embed_text(text: str):
-    response = genai.embed_content(
-        model="models/embedding-001",
-        content=text
-    )
-    return response["embedding"]
+def embed_text(text: str, retries: int = 3):
+    for attempt in range(retries):
+        try:
+            result = client.models.embed_content(
+                model="text-embedding-004",
+                contents=text
+            )
+            return result.embeddings[0].values
+
+        except ResourceExhausted:
+            wait = 20
+            print(f"[WARN] Gemini quota hit. Retrying in {wait}s...")
+            time.sleep(wait)
+
+    raise Exception("Embedding failed due to quota limits")

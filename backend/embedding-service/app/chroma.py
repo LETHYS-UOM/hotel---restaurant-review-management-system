@@ -16,3 +16,9 @@ def save_embedding(review_id: str, embedding, metadata: dict):
         embeddings=[embedding],
         metadatas=[metadata]
     )
+
+def count_embeddings():
+    return collection.count()
+
+def peek_embeddings(limit=5):
+    return collection.peek(limit=limit)

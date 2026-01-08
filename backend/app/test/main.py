@@ -98,6 +98,29 @@ def get_all_reviews_from_db():
     except Exception as e:
         print(f"Database Error: {e}")
         raise e
+    
+# def remove_all_reviews_from_db():
+#     try:
+#         conn = pyodbc.connect(DB_CONNECTION_STRING)
+#         cursor = conn.cursor()
+#
+#         # Delete all records from ProcessedReviews
+#         cursor.execute("DELETE FROM dbo.review_photos")
+#         conn.commit()
+#
+#         # Delete all records from ReviewPhotos
+#         cursor.execute("DELETE FROM dbo.ReviewPhotos")
+#         conn.commit()
+#
+#         # Delete all records from RawReviews
+#         cursor.execute("DELETE FROM dbo.ProcessedReviews")
+#         conn.commit()
+#
+#         conn.close()
+#         return True
+#     except Exception as e:
+#         print(f"Database Error: {e}")
+#         raise e
 
 # ==========================================
 # 5. API ROUTES
@@ -153,6 +176,12 @@ async def start_booking_scrape(payload: BookingScrapeRequest, background_tasks: 
 
     Runs in a background task so the HTTP request returns immediately.
     """
+    
+    try:
+        remove_all_reviews_from_db()
+    except Exception as e:
+        print(e)
+    
     try:
         background_tasks.add_task(scrape_booking, str(payload.url), payload.headless)
     except Exception as exc:  # noqa: BLE001

@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "rating": 5,
+    "userName": "KKaushani",
+    "text": "Best and beautiful location.💚Friendly staff.😊 Delicious food😋Thanks for friendly service👍",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Aug 01, 2023",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "rating": 5,
+    "userName": "AAnonymous",
+    "text": "We stayed at villa 1972 for 8 nights and we had the best time. We highly recommend this place!Staff were super friendly and very helpful. Food was delicious. The view from the villa was stunning. Perfect for a romantic getaway or a family vacation.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Food",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 3,
+    "rating": 4,
+    "userName": "FFehr",
+    "text": "Die unterkunft an sich war super. Das Personal war super freundlich aber dürfte mehr auf Personen zugehen.",
+    "sentiment": "Neutral",
+    "categories": [
+      "Staff",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 4,
+    "rating": 5,
+    "userName": "Angela",
+    "text": "La casa, la piscina y las vistas son espectaculares. Los anfitriones muy serviciales y la comida muy buena! El acceso es complicado con la moto. Está alejado del centro (más o menos media hora)",
+    "sentiment": "Positive",
+    "categories": [
+      "Facilities",
+      "Location",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Oct 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 5,
+    "rating": 5,
+    "userName": "Carlos",
+    "text": "Las vistas y las instalaciones",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Aug 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 6,
+    "rating": 5,
+    "userName": "Abdulrahman",
+    "text": "",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Jun 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 7,
+    "rating": 5,
+    "userName": "Sandaru",
+    "text": "",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Mar 01, 2024",
+    "status": "Pending"
+  },
+  {
+    "id": 8,
+    "rating": 5,
+    "userName": "Yevgeniy",
+    "text": "",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Apr 01, 2024",
+    "status": "Pending"
+  }
+]

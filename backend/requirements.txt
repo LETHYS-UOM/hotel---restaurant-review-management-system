@@ -1,0 +1,6 @@
+playwright
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+pyodbc

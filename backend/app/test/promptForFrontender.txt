@@ -1,0 +1,41 @@
+Role: You are a Review Data Processor and Sentiment Analyst for a hotel reputation management system.
+
+Task: I will provide you with a JSON array of raw hotel reviews. Your job is to parse, clean, and restructure this data into a specific JSON output format.
+
+Transformation Rules:
+
+id: Use the original review_id.
+
+rating: The input score is out of 10. Convert this to a 1-5 star rating scale (e.g., score / 2). Round to the nearest integer.
+
+userName: The input does not have a specific name field. You must extract the name from the raw_review field. The name is typically the very first word or two at the start of that string (e.g., if raw_review is "Prem IndiaDouble Room...", the name is "Prem").
+
+text: Combine the title, positive_txt, and negative_txt into a single, coherent paragraph. Do not include empty strings if the positive or negative text is missing.
+
+sentiment: Analyze the combined text and the score. Output one of the following: "Positive", "Neutral", "Negative".
+
+categories: Analyze the text and tag the review with relevant categories from this list: ["Cleanliness", "Staff", "Location", "Facilities", "Comfort", "Value", "Noise", "Food", "Privacy"]. Max 3 categories.
+
+source: Always set this to "Booking.com".
+
+date: Format the reviewer_stay_date into "MMM DD, YYYY" format (e.g., "Sep 01, 2025").
+
+status: Always set this to "Pending".
+
+Input Data: [{"review_id": 1, "title": "Exceptional", "score": 10.0, "positive_txt": "Best and beautiful location.💚Friendly staff.😊 Delicious food😋Thanks for friendly service👍", "negative_txt": "", "posted_date": null, "reviewer_stay_date": "2023-08-01", "num_of_nights": 1, "traveler_type": "Couple", "room_name": "Double Room with Pool View", "raw_review": "KKaushani Sri LankaDouble Room with Pool View1 night · August 2023CoupleReviewed: 13 August 2023ExceptionalScored 10 10Best and beautiful location.💚Friendly staff.😊 Delicious food😋Thanks for friendly service👍HelpfulNot helpful", "photo": [{"src": "https://q-xx.bstatic.com/xdata/images/xphoto/max1280x900/258054172.jpg?k=0d5d49294d523ecde6d1f4c19bb78b7983140107873adf0d88d266f53082978a&o=", "alt": "Guests staying at Villa 1972"}]}, {"review_id": 2, "title": "We stayed at villa 1972 for 8 nights and we had the best time. We highly recommend this place!", "score": 10.0, "positive_txt": "Staff were super friendly and very helpful. Food was delicious. The view from the villa was stunning. Perfect for a romantic getaway or a family vacation.", "negative_txt": "", "posted_date": null, "reviewer_stay_date": "2025-12-01", "num_of_nights": 8, "traveler_type": "Couple", "room_name": "Family Room with Balcony", "raw_review": "AAnonymous United KingdomFamily Room with Balcony8 nights · December 2025CoupleReviewed: 14 December 2025We stayed at villa 1972 for 8 nights and we had the best time. We highly recommend this place!Scored 10 10Staff were super friendly and very helpful. Food was delicious. The view from the villa was stunning. Perfect for a romantic getaway or a family vacation.HelpfulNot helpful", "photo": []}, {"review_id": 3, "title": "Entspannt, sauber und gut für 2 Tage", "score": 8.0, "positive_txt": "Die unterkunft an sich war super.", "negative_txt": "Das Personal war super freundlich aber dürfte mehr auf Personen zugehen.", "posted_date": null, "reviewer_stay_date": "2025-12-01", "num_of_nights": 2, "traveler_type": "Group", "room_name": "Family Room with Balcony", "raw_review": "FFehr SwitzerlandFamily Room with Balcony2 nights · December 2025GroupReviewed: 1 January 2026Entspannt, sauber und gut für 2 TageScored 8.0 8.0Die unterkunft an sich war super.Das Personal war super freundlich aber dürfte mehr auf Personen zugehen.Show translationHelpfulNot helpful", "photo": []}, {"review_id": 4, "title": "Superb", "score": 9.0, "positive_txt": "La casa, la piscina y las vistas son espectaculares. Los anfitriones muy serviciales y la comida muy buena!", "negative_txt": "El acceso es complicado con la moto. Está alejado del centro (más o menos media hora)", "posted_date": null, "reviewer_stay_date": "2025-10-01", "num_of_nights": 3, "traveler_type": "Couple", "room_name": "Double Room with Pool View", "raw_review": "Angela SpainDouble Room with Pool View3 nights · October 2025CoupleReviewed: 27 November 2025SuperbScored 9.0 9.0La casa, la piscina y las vistas son espectaculares. Los anfitriones muy serviciales y la comida muy buena!El acceso es complicado con la moto. Está alejado del centro (más o menos media hora)Show translationHelpfulNot helpful", "photo": [{"src": "https://q-xx.bstatic.com/xdata/images/xphoto/max1280x900/614367065.jpg?k=4baa31a7f20d7a969d331ee309342f8f2dfb27151e06acee00f475a91ec0519f&o=", "alt": "The swimming pool at or close to Villa 1972"}, {"src": "https://q-xx.bstatic.com/xdata/images/xphoto/max1280x900/614367086.jpg?k=b2440f8aff0f7a9d17a53e6345052080de076f1c0643e6db4aa34c998b05a430&o=", "alt": "Food at or somewhere near the hotel"}, {"src": "https://q-xx.bstatic.com/xdata/images/xphoto/max1280x900/614367100.jpg?k=c032ea2ad2ea86b1267c9eebf25e93bb52351c943c6b5e50d4259a0b3aabe68a&o=", "alt": "Natural landscape near the hotel"}]}, {"review_id": 5, "title": "Tranquilidad y Paz", "score": 9.0, "positive_txt": "Las vistas y las instalaciones", "negative_txt": "", "posted_date": null, "reviewer_stay_date": "2025-08-01", "num_of_nights": 2, "traveler_type": "Family", "room_name": "Double Room with Pool View", "raw_review": "Carlos SpainDouble Room with Pool View2 nights · August 2025FamilyReviewed: 5 November 2025Tranquilidad y PazScored 9.0 9.0Las vistas y las instalacionesShow translationHelpfulNot helpful", "photo": []}, {"review_id": 6, "title": "Superb", "score": 9.0, "positive_txt": "", "negative_txt": "", "posted_date": null, "reviewer_stay_date": "2025-06-01", "num_of_nights": 1, "traveler_type": "Couple", "room_name": "Double Room with Pool View", "raw_review": "AAbdulrahman United Arab EmiratesDouble Room with Pool View1 night · June 2025CoupleReviewed: 19 June 2025SuperbScored 9.0 9.0There are no comments available for this review", "photo": []}, {"review_id": 7, "title": "Exceptional", "score": 10.0, "positive_txt": "", "negative_txt": "", "posted_date": null, "reviewer_stay_date": "2024-03-01", "num_of_nights": 1, "traveler_type": "Couple", "room_name": "Double Room with Pool View", "raw_review": "Sandaru Sri LankaDouble Room with Pool View1 night · March 2024CoupleReviewed: 29 March 2024ExceptionalScored 10 10There are no comments available for this review", "photo": []}, {"review_id": 8, "title": "Exceptional", "score": 10.0, "positive_txt": "", "negative_txt": "", "posted_date": null, "reviewer_stay_date": "2024-04-01", "num_of_nights": 1, "traveler_type": "Couple", "room_name": "Family Room with Balcony", "raw_review": "Yevgeniy KazakhstanFamily Room with Balcony1 night · April 2024CoupleReviewed: 18 May 2024ExceptionalScored 10 10There are no comments available for this review", "photo": []}]
+
+Output Format: Return only a valid JSON array with objects matching this structure:
+
+[
+  {
+    "id": 1,
+    "rating": 4,
+    "userName": "Extracted Name",
+    "text": "The combined review text...",
+    "sentiment": "Positive",
+    "categories": ["Category1", "Category2"],
+    "source": "Booking.com",
+    "date": "Sep 01, 2025",
+    "status": "Pending"
+  }
+]

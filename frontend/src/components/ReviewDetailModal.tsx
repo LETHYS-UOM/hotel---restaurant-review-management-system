@@ -5,28 +5,33 @@ interface ReviewDetailModalProps {
   isOpen: boolean;
   onClose: () => void;
   review: {
-    id: string;
-    reviewerName: string;
+    id: number | string;
+    userName?: string;
     rating: number;
     date: string;
-    reviewText: string;
-    sentiment: 'Positive' | 'Negative' | 'Neutral';
+    text?: string;
+    sentiment: string;
     categories: string[];
-    keyPhrases: string[];
-    summary: string;
-    platformReviewId: string;
-    language: string;
-    replyStatus: string;
-    firstSeen: string;
-    lastUpdated: string;
-    scrapedAt: string;
-    hasReply: string;
+    source?: string;
+    status?: string;
+    // Optional fields from detailed data
+    reviewerName?: string;
+    reviewText?: string;
+    keyPhrases?: string[];
+    summary?: string;
+    platformReviewId?: string;
+    language?: string;
+    replyStatus?: string;
+    firstSeen?: string;
+    lastUpdated?: string;
+    scrapedAt?: string;
+    hasReply?: string;
     images?: { id: number; url: string; alt: string; }[];
   };
 }
 
 const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) => {
-  if (!isOpen) return null;
+  if (!isOpen || !review) return null;
 
   const getSentimentColor = (sentiment: string) => {
     switch (sentiment) {
@@ -39,22 +44,27 @@ const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) 
     }
   };
 
+  // Use available fields with fallbacks
+  const displayName = review.reviewerName || review.userName || 'Anonymous';
+  const displayText = review.reviewText || review.text || 'No review text available';
+  const displayRating = Math.min(5, Math.max(0, Math.round(review.rating || 0)));
+
   return (
     <div className="review-modal-overlay" onClick={onClose}>
       <div className="review-modal" onClick={(e) => e.stopPropagation()}>
         {/* Header */}
         <div className="review-modal-header">
           <div className="review-modal-title">
-            <h2>{review.reviewerName}</h2>
+            <h2>{displayName}</h2>
             <button className="close-btn" onClick={onClose}>
               <X size={20} />
             </button>
           </div>
           <div className="review-rating-date">
             <div className="stars">
-              {'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}
+              {'★'.repeat(displayRating)}{'☆'.repeat(5 - displayRating)}
             </div>
-            <span className="review-date">{review.date}</span>
+            <span className="review-date">{review.date || 'N/A'}</span>
           </div>
         </div>
 
@@ -63,7 +73,7 @@ const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) 
           {/* Review Text */}
           <div className="review-section">
             <h3 className="section-label">Review</h3>
-            <p className="review-text">{review.reviewText}</p>
+            <p className="review-text">{displayText}</p>
           </div>
 
           {/* Review Images */}
@@ -108,30 +118,36 @@ const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) 
               </span>
             </div>
 
-            <div className="analysis-item">
-              <span className="analysis-label">Categories</span>
-              <div className="categories-badges">
-                {review.categories.map((category, index) => (
-                  <span key={index} className="category-badge">
-                    {category}
-                  </span>
-                ))}
+            {review.categories && review.categories.length > 0 && (
+              <div className="analysis-item">
+                <span className="analysis-label">Categories</span>
+                <div className="categories-badges">
+                  {review.categories.map((category, index) => (
+                    <span key={index} className="category-badge">
+                      {category}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
-            <div className="analysis-item">
-              <span className="analysis-label">Key Phrases</span>
-              <div className="key-phrases">
-                {review.keyPhrases.map((phrase, index) => (
-                  <span key={index} className="key-phrase">"{phrase}"</span>
-                ))}
+            {review.keyPhrases && review.keyPhrases.length > 0 && (
+              <div className="analysis-item">
+                <span className="analysis-label">Key Phrases</span>
+                <div className="key-phrases">
+                  {review.keyPhrases.map((phrase, index) => (
+                    <span key={index} className="key-phrase">"{phrase}"</span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
-            <div className="analysis-item">
-              <span className="analysis-label">Summary</span>
-              <p className="summary-text">{review.summary}</p>
-            </div>
+            {review.summary && (
+              <div className="analysis-item">
+                <span className="analysis-label">Summary</span>
+                <p className="summary-text">{review.summary}</p>
+              </div>
+            )}
           </div>
 
           {/* AI Reply Generator */}
@@ -168,34 +184,54 @@ const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) 
                 <span className="metadata-label">Review ID</span>
                 <span className="metadata-value">{review.id}</span>
               </div>
-              <div className="metadata-item">
-                <span className="metadata-label">Platform Review ID</span>
-                <span className="metadata-value">{review.platformReviewId}</span>
-              </div>
-              <div className="metadata-item">
-                <span className="metadata-label">Language</span>
-                <span className="metadata-value">{review.language}</span>
-              </div>
-              <div className="metadata-item">
-                <span className="metadata-label">Reply Status</span>
-                <span className="metadata-value">{review.replyStatus}</span>
-              </div>
-              <div className="metadata-item">
-                <span className="metadata-label">First Seen</span>
-                <span className="metadata-value">{review.firstSeen}</span>
-              </div>
-              <div className="metadata-item">
-                <span className="metadata-label">Last Updated</span>
-                <span className="metadata-value">{review.lastUpdated}</span>
-              </div>
-              <div className="metadata-item">
-                <span className="metadata-label">Scraped At</span>
-                <span className="metadata-value">{review.scrapedAt}</span>
-              </div>
-              <div className="metadata-item">
-                <span className="metadata-label">Has AI Reply</span>
-                <span className="metadata-value">{review.hasReply}</span>
-              </div>
+              {review.source && (
+                <div className="metadata-item">
+                  <span className="metadata-label">Source</span>
+                  <span className="metadata-value">{review.source}</span>
+                </div>
+              )}
+              {review.platformReviewId && (
+                <div className="metadata-item">
+                  <span className="metadata-label">Platform Review ID</span>
+                  <span className="metadata-value">{review.platformReviewId}</span>
+                </div>
+              )}
+              {review.language && (
+                <div className="metadata-item">
+                  <span className="metadata-label">Language</span>
+                  <span className="metadata-value">{review.language}</span>
+                </div>
+              )}
+              {(review.replyStatus || review.status) && (
+                <div className="metadata-item">
+                  <span className="metadata-label">Reply Status</span>
+                  <span className="metadata-value">{review.replyStatus || review.status}</span>
+                </div>
+              )}
+              {review.firstSeen && (
+                <div className="metadata-item">
+                  <span className="metadata-label">First Seen</span>
+                  <span className="metadata-value">{review.firstSeen}</span>
+                </div>
+              )}
+              {review.lastUpdated && (
+                <div className="metadata-item">
+                  <span className="metadata-label">Last Updated</span>
+                  <span className="metadata-value">{review.lastUpdated}</span>
+                </div>
+              )}
+              {review.scrapedAt && (
+                <div className="metadata-item">
+                  <span className="metadata-label">Scraped At</span>
+                  <span className="metadata-value">{review.scrapedAt}</span>
+                </div>
+              )}
+              {review.hasReply && (
+                <div className="metadata-item">
+                  <span className="metadata-label">Has AI Reply</span>
+                  <span className="metadata-value">{review.hasReply}</span>
+                </div>
+              )}
             </div>
           </div>
         </div>

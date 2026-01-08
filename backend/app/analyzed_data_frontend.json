@@ -2,8 +2,23 @@
   {
     "id": 1,
     "rating": 5,
-    "userName": "KKaushani",
-    "text": "Best and beautiful location.💚Friendly staff.😊 Delicious food😋Thanks for friendly service👍",
+    "userName": "Liisa",
+    "text": "Exceptional. Perfect location right next to the ocean and a safe spot for swimming. Excellent food and comfy rooms. The best thing about this accommodation is the staff, who go above and beyond to make your stay a true paradise holiday. They looked after our every need and also planned us many trips to interesting locations. Our only job was to relax, relax, relax. If you're expecting a huge mansion with marble floors, this may not be the place for you. For us the cabins provided everything we needed: security, air conditioning and privacy.",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Food",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "rating": 5,
+    "userName": "Pierre",
+    "text": "A great place to see the sunrise from bed… The way we were welcomed, the location, the cabin, the staff very generous with their time and smile. The food was real good. A special place to discover.. It was all perfect, but to be sure to get a good choice of fresh seafood its a good idea to call them 24 hours before arrival.",
     "sentiment": "Positive",
     "categories": [
       "Location",
@@ -11,14 +26,14 @@
       "Food"
     ],
     "source": "Booking.com",
-    "date": "Aug 01, 2023",
+    "date": "Mar 01, 2025",
     "status": "Pending"
   },
   {
-    "id": 2,
+    "id": 3,
     "rating": 5,
-    "userName": "AAnonymous",
-    "text": "We stayed at villa 1972 for 8 nights and we had the best time. We highly recommend this place!Staff were super friendly and very helpful. Food was delicious. The view from the villa was stunning. Perfect for a romantic getaway or a family vacation.",
+    "userName": "Grün",
+    "text": "Insider Tip. We are a young couple from Austria and found the villas through coincidence. We recently spent a few nights at the Tomorrowland Hostel in Ella. (where the hospitality far exceeded typical hostel standards.) When we mentioned our plans to travel to the South Coast, Tomorrowland’s Guest Relations Officer, Pooja, introduced us to their brand-new upscale boutique property—Tomorrowland Beach Villas in Rekawa, Tangalle—promising a luxurious all-inclusive experience. We decided to give it a try From the moment we arrived at the property, it felt like a slice of paradise. We were warmly welcomed by two wonderful hosts who greeted us with cool, refreshing towels and freshly squeezed fruit juices—an incredibly thoughtful touch after our journey. Hungry from the trip, we were soon treated to the best hash browns we’ve ever had—crispy, golden, and delightfully thick, almost the size of a deep-dish, medium pizza! Accompanied by perfectly boiled eggs, a plate of fresh tropical fruits, and organic tea from Sri Lanka’s highlands, the breakfast set the tone for an unforgettable stay. The all-inclusive package included a magical canoeing trip on the serene Rekawa Lagoon and a spectacular beachside dinner. We've never come across an all-inclusive experience of this caliber in Sri Lanka. From the romantic cabins with extra-long beds to the wide, luxurious sunbeds on the private beach, every detail of our stay was designed for comfort and indulgence. The warm hospitality, exquisite food, unlimited drinks, and impeccable service made our experience truly exceptional. It's a real insider tip, still spared from the crowds of tourists ;) We cannot recommend this place enough. If you’re looking for a five-star, all-inclusive getaway where you’ll be pampered from start to finish, Tomorrowland Beach Villas is the place to go! Thank you Pooja! We will come back :) It is perfect to get to know the idyllic and quiet side of Sri Lanka. At the right times you can have the entire beach to yourself. But you shouldn't expect a party mile. Which was perfect for to escape the hustle and bustle of the city.",
     "sentiment": "Positive",
     "categories": [
       "Staff",
@@ -26,83 +41,183 @@
       "Location"
     ],
     "source": "Booking.com",
-    "date": "Dec 01, 2025",
-    "status": "Pending"
-  },
-  {
-    "id": 3,
-    "rating": 4,
-    "userName": "FFehr",
-    "text": "Die unterkunft an sich war super. Das Personal war super freundlich aber dürfte mehr auf Personen zugehen.",
-    "sentiment": "Neutral",
-    "categories": [
-      "Staff",
-      "Facilities"
-    ],
-    "source": "Booking.com",
-    "date": "Dec 01, 2025",
+    "date": "Feb 01, 2025",
     "status": "Pending"
   },
   {
     "id": 4,
     "rating": 5,
-    "userName": "Angela",
-    "text": "La casa, la piscina y las vistas son espectaculares. Los anfitriones muy serviciales y la comida muy buena! El acceso es complicado con la moto. Está alejado del centro (más o menos media hora)",
+    "userName": "Georgia",
+    "text": "Gorgeous beach villa stay, a welcomed break from the hostel life. I had the pleasure of spending a night at one of Ella’s best-known hostels, Tomorrowland, where I met the owner. During our conversation, he suggested that if I was planning to visit the southern beaches, I should consider staying at their brand-new beach property—Tomorrowland Beach Villas in Rekawa, Tangalle. Although I had already booked accommodations in Mirissa, I decided to take a chance and spend a night at Tomorrowland Beach Villas before heading to my final destination—Kandy. Upon arrival, I was warmly welcomed by the lovely hosts, Irushi and Hiruni, making it one of the most heartfelt greetings I’ve received at a property in Sri Lanka. I was given the Winter Villa, a stunning all-wood cabin perched right at the water’s edge, where the waves crashed just below. For dinner, I indulged in one of Tomorrowland’s specialties—the Pompano Fish, part of an impressive selection of freshly caught seafood. Dining at sunset, right where the waves met the shore, was nothing short of sublime. Adding to the charm, a breakwater runs perpendicular to Tomorrowland’s private beach. The right side forms a serene, blue-water pool, where I enjoyed a leisurely soak until sundown. Although Tomorrowland had arranged an early morning bird-watching lagoon cruise, I ended up sleeping in until 9:00 AM—unfortunately missing the adventure, as I had to rush to catch my transportation to Kandy. Tomorrowland Beach Villas is a paradise for couples who cherish privacy, romance, and a touch of indulgence. I will definitely be returning with my partner next time—and with a few well-earned credits from Tomorrowland Properties, it’s sure to be even more memorable. Five stars all the way! Genuinely everything was amazing. Wouldn’t change a thing :)",
     "sentiment": "Positive",
     "categories": [
-      "Facilities",
+      "Staff",
       "Location",
       "Food"
     ],
     "source": "Booking.com",
-    "date": "Oct 01, 2025",
+    "date": "Feb 01, 2025",
     "status": "Pending"
   },
   {
     "id": 5,
     "rating": 5,
-    "userName": "Carlos",
-    "text": "Las vistas y las instalaciones",
+    "userName": "Lisa",
+    "text": "Amazing stay, you won’t regret it. I recently had the pleasure of staying a few nights at the picturesque Tomorrowland Hostel in Ella, Sri Lanka, and the hospitality there far surpassed typical hostel standards. During my visit, Pooja, the guest relations officer, recommended their new upscale boutique property, Tomorrowland Beach Villas in Rekawa, Tangalle, for a luxurious all-inclusive experience—and it truly delivered. From the moment I arrived, the experience was nothing short of heavenly. I was warmly welcomed by two gracious hosts who greeted me with a cool, refreshing towel and a glass of freshly squeezed fruit juice. It was early morning, and I was quite hungry, so they treated me to the best hash browns I’ve ever tasted, along with a delicious spread of fresh fruits and organic tea sourced from Sri Lanka’s highlands. The all-inclusive package was a highlight, featuring a memorable canoeing trip on the serene Rekawa Lagoon and a spectacular beachside dinner. The meal included giant shrimp caught fresh during the lagoon adventure—a dining experience I won’t soon forget. I’ve yet to come across an all-inclusive offering quite like this one. It was absolutely worth every moment, and I cannot recommend Tomorrowland Beach Villas enough. The hospitality, cuisine, and service were exceptional in every way. If you’re looking for an unparalleled “all-inclusive” retreat on Sri Lanka’s South Coast, this is the place to go. Five stars, without hesitation!",
     "sentiment": "Positive",
     "categories": [
-      "Location",
-      "Facilities"
+      "Staff",
+      "Food",
+      "Value"
     ],
     "source": "Booking.com",
-    "date": "Aug 01, 2025",
+    "date": "Dec 01, 2024",
     "status": "Pending"
   },
   {
     "id": 6,
-    "rating": 5,
-    "userName": "Abdulrahman",
-    "text": "",
+    "rating": 4,
+    "userName": "Markus",
+    "text": "Great place to stay directly at the water, very close to the beach. Great location directly at the beach. You can safely swim in the harbor – the beaches are beautiful but supposedly not safe for swimming. It is a nice place and the host is extremely helpful in all matters. Aircondition, fans etc. are all brand new and in best order and everything seems to be well thought through. All seemed sparkling clean to me. The villas are not huge. You can store your bags under the bed. No problem if the weather is nice.",
     "sentiment": "Positive",
-    "categories": [],
+    "categories": [
+      "Location",
+      "Staff",
+      "Cleanliness"
+    ],
     "source": "Booking.com",
-    "date": "Jun 01, 2025",
+    "date": "Jan 01, 2026",
     "status": "Pending"
   },
   {
     "id": 7,
     "rating": 5,
-    "userName": "Sandaru",
-    "text": "",
+    "userName": "Alex",
+    "text": "The nature in Sri Lanka is wonderful, the place is ideal and the host was a wonderful person and conversationalist. Excellent location. A quiet closed bay is a minute's walk away, where you can swim calmly. Nearby, of course, there is also an open beach with huge ocean waves. We stayed for a week and the holiday was wonderful. Beautiful nature, a large variety of different animals, which is not at all usual for an urban European resident. Many thanks to the hospitable and responsive host. He organized a canoe trip on the lagoon with mangrove thickets, a night visit to beaches with large sea turtles, a visit to the elephant sanctuary and a two-day trip to the mountains in Ella. Everything was wonderful.",
     "sentiment": "Positive",
-    "categories": [],
+    "categories": [
+      "Location",
+      "Staff",
+      "Food"
+    ],
     "source": "Booking.com",
-    "date": "Mar 01, 2024",
+    "date": "Dec 01, 2025",
     "status": "Pending"
   },
   {
     "id": 8,
     "rating": 5,
-    "userName": "Yevgeniy",
-    "text": "",
+    "userName": "Rhijja",
+    "text": "Exceptional. Super friendly people who do everything to make you feel welcome. Wonderful small but nice hut right by the sea with all amenities: good air conditioning, huge bed, clean and beautiful bathroom. Cold shower perfectly fine after a dip in the sea. Wifi is fast and works great. Quiet bay where you can swim safely. Blissfully large and comfortable sun loungers that you won't want to leave. A place to completely unwind. Falling asleep and waking up with sea sounds. The beach is not very paradisiacal, but it is nice that you can swim safely in the sea.",
     "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Comfort",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 9,
+    "rating": 5,
+    "userName": "Marco",
+    "text": "Exceptional. Wonderful accommodation to switch off and enjoy the peace. Very friendly staff and above all fantastic food, which was certainly the best on my Sri Lanka trip! Also, for any questions or organization for further travel, one is helped and the people there really did everything to make my stay as pleasant as possible.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Food",
+      "Value"
+    ],
+    "source": "Booking.com",
+    "date": "Sep 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 10,
+    "rating": 5,
+    "userName": "AAnna3181",
+    "text": "Exceptional. We want to say a big thank you for the amazing vacation, we were looking for exactly this kind of relaxation and homey atmosphere. Special thanks to the hotel owner Uday and his assistants, for their hospitality and soulful atmosphere, humor and understanding. The beach is literally a couple of meters from the hotel, sandy shore, there is a barrier from the waves, and it was comfortable and safe to swim. Sun loungers are wide and comfortable. Cleaning in the house was done every day. Among the guests were only us and we felt complete privacy. Every day we were spoiled with local national dishes, everything was very tasty and unusual. We liked the curries and fried shrimp the most. On the day of arrival, we celebrated a birthday, the staff congratulated us with a magnificent cake and balloons. We were also organized two excursions: a canoe trip on the Rekawa River and a trip to the turtles. We had a great rest and recharged only with positive emotions. We recommend the hotel to those who are looking for relaxation and silence, to fall asleep and wake up to the sound of the waves with wonderful views right from the window of a small but cozy bungalow. Everything was liked.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Location",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Sep 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 11,
+    "rating": 5,
+    "userName": "Yannick",
+    "text": "Strandhütten wie im Paradies. Very cozy beach huts directly on the sea! Nicely furnished and with air conditioning, so you feel very comfortable, mosquito nets are even available, although I haven't seen a single mosquito. The location is a bit outside, but it is very quiet, as you imagine the tropical paradise. The complex is very beautiful and kept clean, even outside the main season. But what I liked best were the super nice owner and his employees, who were there for me around the clock and even organized great excursions (e.g., turtle watching) for me and helped me with onward travel. PS: You absolutely must eat there too, the cooking is incredibly good. Nothing, I was more than satisfied with everything.",
+    "sentiment": "Positive",
+    "categories": [
+      "Comfort",
+      "Location",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "May 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 12,
+    "rating": 5,
+    "userName": "Iris",
+    "text": "Hervorragende Unterkunft zum relaxen am Meer. The location was perfect. Property with several small bungalows, palm trees, large comfortable sun loungers and seating areas in the shade. We had a small bungalow with a sea view, everything was clean, cozy and well thought out. Varied breakfast was included. It was even brought to our own small terrace. The staff was super friendly and the owner gave us lots of tips for the area and sometimes organized them. Swimming in the sea was also possible right outside the front door. Anyone looking for peace and relaxation is in the right place.",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Mar 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 13,
+    "rating": 5,
+    "userName": "Paolo",
+    "text": "Dormire di fonte al mare col rumore dell’oceano è fantastico! The welcome from the staff always smiling and helpful and the beachfront location, and the simple but excellent food!!",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 14,
+    "rating": 5,
+    "userName": "Jil",
+    "text": "Ein wunderbarer Aufenthalt. Upon arrival at the accommodation, one was greeted very friendly by the owner. A very delicious papaya juice was immediately provided. Next, we were shown to our bungalow, which is really very cozy and modern. I also particularly liked that you can look out at the sea from the bed. Especially beautiful during the sunrise. The service is available around the clock. Every wish is fulfilled here. The owner is very nice and has very good English skills, which makes communication quite easy. The turtle watching and the canyon cruise, which we booked through the accommodation, were a great experience. The accommodation also has a restaurant. There you can get delicious traditional food as well as international dishes, which are highly recommended. Finally, I can mention that we enjoyed our stay very much and would come back anytime. Nothing",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Location",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Feb 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 15,
+    "rating": 5,
+    "userName": "Anni",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Neutral",
     "categories": [],
     "source": "Booking.com",
-    "date": "Apr 01, 2024",
+    "date": "Mar 01, 2025",
     "status": "Pending"
   }
 ]

@@ -10,6 +10,8 @@ from typing import List
 
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
+import importlib
+import importlib.util
 import pyodbc
 import sys
 import os
@@ -108,21 +110,33 @@ def insert_review(cursor, review: Review) -> None:
 
 
 def run_review_processor() -> None:
+    """Import and run the review processor to generate analyzed_data_frontend.json"""
     current_dir = pathlib.Path(__file__).resolve().parent
-    backend_path = current_dir.parent
-    sys.path.append(str(backend_path))
+    services_search_roots = [
+        current_dir,
+        current_dir.parent,
+        current_dir.parent.parent,
+    ]
+
+    for root in services_search_roots:
+        candidate = root / "services" / "review_processor.py"
+        if candidate.exists():
+            spec = importlib.util.spec_from_file_location("review_processor", candidate)
+            if spec and spec.loader:
+                module = importlib.util.module_from_spec(spec)
+                sys.modules["review_processor"] = module
+                spec.loader.exec_module(module)
+                module.main()
+                print("✓ Review processing completed.")
+                return
 
     try:
-        from ..services import review_processor
-    except ImportError:
-        try:
-            from test.services import review_processor
-        except ImportError:
-            print("Review processor not found; skipping post-processing.")
-            return
-
-    review_processor.main()
-    print("✓ Review processing completed.")
+        review_processor = importlib.import_module("review_processor")
+        review_processor.main()
+        print("✓ Review processing completed.")
+    except ModuleNotFoundError:
+        searched = [str((root / "services").resolve()) for root in services_search_roots]
+        print(f"Review processor not found; skipping post-processing. Searched: {searched}")
 
 
 def scrape_booking(url: str, headless: bool = True) -> dict:

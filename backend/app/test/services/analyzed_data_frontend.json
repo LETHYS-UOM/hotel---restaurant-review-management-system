@@ -1,0 +1,788 @@
+[
+  {
+    "id": 1,
+    "rating": 5,
+    "userName": "Minendra",
+    "text": "Beautiful, felt right at home. It’s in a perfect spot atop of the hills with a magnificent view of the bay. Maybe the drive getting up but it was rush hour. Once you are in the hotel everything is walking distance.",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "rating": 5,
+    "userName": "Raissa",
+    "text": "Great hotel, friendly staff - minor improvement points. Me and my friends had an amazing time staying at NiiRA. The staff was the most friendly I've ever encountered, they went above and beyond on service to make us feel good. Super close to the beach, rooms were amazing and food for dinner was the main highlight. You must try the local food there, probably the best we had throughout our days in Mirissa. Only 2 downsides to the stay so you are aware: - The hotel is located on a hill so expect to walk up when coming back from the beach. Would be great if they improved the road on the way or something similar to make the way up easier - The staff still feels quite new to the role (it's a new hotel) so expect some delays on food and service isn't still at the same level as the hotel itself. But they are always super willing and friendly which makes up for any out of sync issues",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Location",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 3,
+    "rating": 5,
+    "userName": "LLeanne",
+    "text": "You must stay here. Location, design of hotel and the rooms are fabulous.",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 4,
+    "rating": 5,
+    "userName": "CCarlos",
+    "text": "Beyond fabulous! Absolutely everything!! The decor, the service, the people, the care. 100% recommend anyone who want to get lost in this paradise called Niira :)",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 5,
+    "rating": 5,
+    "userName": "Max",
+    "text": "Exceptional. Everything about the hotel was great and staff were friendly and helpful. Loud music from a neighbouring bar.",
+    "sentiment": "Neutral",
+    "categories": [
+      "Staff",
+      "Noise"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 6,
+    "rating": 5,
+    "userName": "Adrian",
+    "text": "Great team, and good concept. Newly built property, tastefully designed, great amenities, very clean, close to the beach, and restaurants, the team communicated very well and went above and beyond to make our stay comfortable",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Facilities",
+      "Cleanliness"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 7,
+    "rating": 5,
+    "userName": "Giedrė",
+    "text": "Perfect stay in Mirissa. The hotel is brand new, beautifully designed with great restaurant and super helpful and friendly staff. I am glad I picked it for my birthday night! :) Nothing :)",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Food",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 8,
+    "rating": 5,
+    "userName": "Hilary",
+    "text": "Beautiful, elegant and serene. Beautiful design, relaxed environment and exceptionally friendly helpful. There’s nothing to do like about this it’s lovely. Still very new so a few things still in progress.",
+    "sentiment": "Positive",
+    "categories": [
+      "Facilities",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 9,
+    "rating": 5,
+    "userName": "DDsrivast07",
+    "text": "Superb. Our two-day stay at Niira was absolutely excellent. The staff were incredibly helpful and genuinely kind, making us feel welcome from the moment we arrived. The breakfast—whether Western or Sri Lankan—was delicious, fresh, and beautifully prepared. The people running the property were amazing and always willing to assist with anything we needed. The place itself is stunning, with beautiful views and a lovely pool that made our stay even more relaxing. I highly recommend this wonderful property to anyone visiting the area. It’s truly a gem!",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Food",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 10,
+    "rating": 5,
+    "userName": "EEmma",
+    "text": "Exceptional. From the moment we arrived we felt so welcome. Sophie greeted us, our bags were swiftly taken off us and we were given ice cold freshly squeezed juice and refreshing cold towels to cool off. We felt VIP and it was lovely. The staff truly are exceptional here! Our rooms (109 &112) were spacious and had spectacular views overlooking the pool, jungle with a side view of the sea too. The meals were all incredible and the cocktails unreal...the tamarind inferno cocktail I will dream about for years to come, it was delicious 😋 I can't fault this hotel and I wish them every success Absolutely nothing we loved it all",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Food",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 11,
+    "rating": 5,
+    "userName": "Diazola",
+    "text": "My friend and I really enjoyed our stay at Niira and would definitely stay there again on our next visit to Mirissa. The hotel is very modern and has a beautiful interior. We stayed in a room leading towards the bar terrace and the view was really nice. Staff were very welcoming and friendly throughout our stay. Staff were also very attentive and were always happy to help with any enquires.",
+    "sentiment": "Positive",
+    "categories": [
+      "Facilities",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 12,
+    "rating": 5,
+    "userName": "Kostas",
+    "text": "100% worth it, extremely professional and friendly staff. If you visit Mirissa make yourself a favour and stay to Niira hotel,worth every penny,",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Value"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 13,
+    "rating": 5,
+    "userName": "Sarah",
+    "text": "Exceptional. I booked for 1 night at the end of my trip as a little bit of luxury and this did not disappoint! The service was outstanding from everyone I encountered throughout my stay & nothing was too much trouble. I had breakfast & dinner at the restaurant which was delicious and plenty of options. They even messaged prior to my check in to confirm any dietary requirements. The room was the standout which had incredible floor to ceiling windows looking out over the bay, absolutely stunning. The room itself was beautiful and included all the little touches for a luxury uplift. Huge thanks to the team that made my stay so special! I would highly recommend a visit to NiiRA!",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Food",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 14,
+    "rating": 5,
+    "userName": "Ewa",
+    "text": "Exceptional. Very nice, well equipped rooms, the view was amazing, very good breakfast, super clean, nice pool and terrace, very friendly staff",
+    "sentiment": "Positive",
+    "categories": [
+      "Comfort",
+      "Food",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 15,
+    "rating": 5,
+    "userName": "Caitlin",
+    "text": "Exceptional. Fantastic stay at NiiRA. Extremely friendly and helpful staff",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 16,
+    "rating": 5,
+    "userName": "VVatsal",
+    "text": "A Perfect Stay at Niira. We had such a great time at Niira — honestly one of the best stays of our entire trip in Mirissa. The property is beautifully designed, modern, and luxurious, with thoughtful touches in every room that make the experience feel special. The hospitality was the biggest highlight. Everyone—from the owners to the managers to the staff—was warm and genuinely invested in making our stay comfortable. A special shout-out to Chatur, who went above and beyond to take care of us throughout and made our anniversary feel really special. We also loved the variety of welcome drink options, including beer. The terrace restaurant, the café, and the pool area are all incredibly scenic. From the terrace and restaurant you can watch surfers catching waves, and at night you get a beautiful view of the sea. The pool is another standout — not just stunning, but also equipped with a bar where you can order drinks while you relax. It’s honestly one of the nicest places to spend time on the property. Breakfast was fresh and delicious (the English breakfast was perfect), and the location is ideal — just a short walk to Mirissa Beach and the main street with cafés and shops. Overall, Niira stood out for its design, hospitality, and all the small personal touches that made our stay memorable. Highly recommend it, and we’d love to come back.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Facilities",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 17,
+    "rating": 5,
+    "userName": "IImran",
+    "text": "Amazing overall and I would definitely go back. The staff really went out of there way to make our stay comfortable. Its a new property with an excellent design aesthetic that blends old and new. The food at the restaurant was delicious! The location is a bit hidden and getting there was confusing. A few street signs would help!",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Food",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 18,
+    "rating": 5,
+    "userName": "Paige",
+    "text": "Superb. My partner and I recently stayed at NiiRa, a wonderful new addition to Mirissa, and had an exceptional experience. The rooms were absolutely lovely - modern, clean, and thoughtfully designed. The staff were incredibly friendly and went above and beyond to make our stay comfortable, showing genuine warmth and professionalism throughout. The facilities were beautiful and clearly well cared for, adding to the relaxing atmosphere. Plus, the location couldn’t be better - it’s close to everything while still feeling peaceful. Overall, we had a fantastic stay and would highly recommend Hotel NiiRa to anyone visiting Mirissa!",
+    "sentiment": "Positive",
+    "categories": [
+      "Facilities",
+      "Staff",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 19,
+    "rating": 5,
+    "userName": "Fred",
+    "text": "The best hotel in the area. Beautiful setting, great staff, we felt very well looked after.",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 20,
+    "rating": 5,
+    "userName": "Louisa",
+    "text": "Superb. We stayed at NiiRA for 4 nights at the end of a longer trip around Sri Lanka. The staff were so welcoming on our arrival and the manager Amila was very easily accessible for the duration of the stay. The hotel is beautiful with a lovely pool area, the rooms have everything you could need. We were able to request breakfast to our terrace in the morning, or have it in the dining area and they accommodated requests for different eating times to fit around activities. They were really helpful with recommendations for things to do and have a list of things you can book through the hotel. The restaurant food was delicious and so are the cocktails. It has a really nice vibe and is close by to the rest of Mirissa but out the way enough that it feels peaceful and relaxing. We also got treatments done at the spa. I would very much recommend staying here for some extremely reasonably priced luxury! Nothing!",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Facilities",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 21,
+    "rating": 5,
+    "userName": "Patrick",
+    "text": "Warm welcome combined with exquisite cuisine. Wonderful boutique hotel, special thanks to Amila, Francesca and the team for their attention to detail and assistance. The restaurant deserves a special mention with spectacular view complimented by outstanding local and western dishes.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Food",
+      "Location"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 22,
+    "rating": 5,
+    "userName": "NNamit",
+    "text": "Perfect destination to stay if you want to explore Mirissa. Whether you are alone or with family or friends - they stay. The vibe of property is mind blowing. A lot of thought has been given while designing the interiors and theme. Their breakfast is on the house and it felt like i am eating in a fine dinning restaurant. They personalise every dish like it was ordered from a 5 star restaurant. I travelled with my 1 year old daughter to celebrate her birthday and they were so nice to make special meals for her, cook as per our requirement. They also upgraded our room as a complimentary gesture. Since we are INDIANS and were travelling with my family, they offered us an Indian Dinner at their restaurant which was not there in the menu. The cocktails here are to die for. The staff here is very nice, polite and accommodating. All the chef were amazing The location is just perfect with 5 mins walking to the beach. The last 2 mins journey to reach here is very steep. So make sure you drive carefully. The bed mattress felt a bit uncomfortable as it was very soft but that depends on person to person. I generally prefer hard mattress",
+    "sentiment": "Positive",
+    "categories": [
+      "Facilities",
+      "Food",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 23,
+    "rating": 5,
+    "userName": "Flavio",
+    "text": "An outstanding place to stay and to relax. The facilities are brand new and of high standards. You can see the bay right out of the bed and from the infinity pool you can enjoy the wilderness of the lush jungle. Special mention goes to the welcoming and attentive staff an the delicious food which is prepared with lots of love. The only small downside is a missing balcony, depending on wich room you are staying.",
+    "sentiment": "Positive",
+    "categories": [
+      "Facilities",
+      "Staff",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 24,
+    "rating": 5,
+    "userName": "Rebecca",
+    "text": "A stylist boutique hotel. We loved the staff, so helpful and kind and friendly all the time Loved the hotel design, so much thought had gone into every corner The rooms are compact but there is the perfect amount of room for a short stay The rooms are very clean Nothing",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Facilities",
+      "Cleanliness"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 25,
+    "rating": 5,
+    "userName": "AAnonymous",
+    "text": "Exceptional. Very helpful and attentive staff offering thoughtful touches and support. Clean and well maintained.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Cleanliness"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 26,
+    "rating": 5,
+    "userName": "AAnonymous",
+    "text": "We stayed here 3 nights! The location is perfect very close to the beach. The food was unreal and the service and attent. Brand new hotel amazingly clean and comfortable facilities with the friendliest and most attentive staff",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Food",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 27,
+    "rating": 5,
+    "userName": "Fabian",
+    "text": "Gehobenere Surfdestinationen scheinen kaum möglich. Extrem zuvorkommendes und bemühtes Personal Architektonisch wurde die Natur (Bäume umbaut) integriert und mit viel Liebe zum Detail kulturelle Merkmale einbezogen Kaffee und Cocktails auf Niveau Sehr kinderfreundlich und sicher Dass man sie eigentlich gar nicht für Ausflüge verlassen möchte",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Facilities",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 28,
+    "rating": 5,
+    "userName": "Ines",
+    "text": "Lovely stay and probably the best hôtel of allSri Lanka we did. The entire team of Niira and Sophie the manager was so k. Emplacement, services proposés, qualité du personnel et du gérant Décoration magnifique. Rien",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Staff",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 29,
+    "rating": 5,
+    "userName": "Stefanie",
+    "text": "Wunderschönes Boutique Hotel. Es war alles einfach perfekt. Von Frühstück bis Abendessen, unglaublicher Service und freundliches Personal. Jedem den ein kleines Boutique-Hotel gefällt ist hier richtig aufgehoben. Es ist nicht nur ein Zimmer wo man schläft, sondern ein Ort wo man sich gerne aufhält. Wir kommen gerne wieder !",
+    "sentiment": "Positive",
+    "categories": [
+      "Food",
+      "Staff",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 30,
+    "rating": 5,
+    "userName": "Klaudia",
+    "text": "Wspaniale! Czyste i nowe pokoje, sprzatane naprawdę dokładnie. Zero wilgoci! Personel na najwyzszym poziomie, nieustannie dbal o nasz komfort, bardzo pomocny i swietnie komunikujacy sie w j angielskim. Przepyszne sniadania. Podczas naszego pobytu na sri lance odwiedzilismy az 7roznych hoteli, rowniez drozszych, i ten zdecydowanie jest na podium",
+    "sentiment": "Positive",
+    "categories": [
+      "Cleanliness",
+      "Staff",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 31,
+    "rating": 5,
+    "userName": "Pauline",
+    "text": "Magique. Quel séjour incroyable ! Nous y avons passé deux nuits dans 2 chambres différentes. Elles sont très belles et parfaitement équipées. Le personnel est aux petits soins pour les clients, et toujours avec le sourire. Nous nous sommes sentis privilégiés. Le restaurant est également excellent ! L’océan et les commerces sont à quelques pas, tout en étant au calme et en pleine nature. Un immense merci à toute l’équipe.",
+    "sentiment": "Positive",
+    "categories": [
+      "Comfort",
+      "Staff",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 32,
+    "rating": 5,
+    "userName": "Jessika",
+    "text": "Superb. Ein stylische Unterkunft in bester Lage mit Blick aufs Meer. Nur wenige Schritte vom Strand entfernt. Ausstattung auf gehobenen Niveau. Herrlicher Pool im Grünen, in dem man aufgrund der Länge richtig schwimmen kann. Es war die komfortabelste Unterkunft auf unserer Reise. Die Mitarbeiter waren zugewandt, freundlich und haben alles möglich gemacht. Obwohl das Hotel komfortabel und auf lokal überdurchschnittlichen Niveau ist, muss sich das Preisgefüge nach der Eröffnung wohl noch etwas einpendeln. Mit Blick auf unsere Reiseerfahrungen ordnen wir es als etwas zu teuer ein, was einen kleinen „Geschmack“ hinterlässt.",
+    "sentiment": "Neutral",
+    "categories": [
+      "Location",
+      "Comfort",
+      "Value"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 33,
+    "rating": 5,
+    "userName": "MMaria",
+    "text": "PERFECTA! Nuestra estancia en Niira, Mirissa fue simplemente perfecta. Tuvimos la suerte de alojarnos en una habitación muy especial y preciosa, con todo cuidado al detalle. Quiero destacar especialmente la amabilidad y lo agradables que son todos los trabajadores del hotel; desde el primer momento nos hicieron sentir como en casa. La comida fue exquisita en todo momento: desayuno, almuerzo y cena. Incluso tuvimos la suerte de coincidir con un cóctel que organizaron, y absolutely todo estaba riquísimo. Además, nuestro vuelo salía muy tarde y hablamos con el manager para ver si era posible al menos ducharnos antes de partir. Sin dudarlo, nos facilitó una habitación para poder estar y ducharnos, un gesto increíble de amabilidad por el cual estamos eternamente agradecidos. Volveremos sin duda alguna. Un hotel maravilloso y un equipo humano excepcional. Nada",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Food",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 34,
+    "rating": 5,
+    "userName": "Enno",
+    "text": "Eine Unterkunft, die keine Wünsche offen lässt. Sehr saubere Unterkunft und das Frühstück lässt keine Wünsche offen. Das Personal ist sehr freundlich. Wir haben uns sehr sehr wohl gefühlt!/",
+    "sentiment": "Positive",
+    "categories": [
+      "Cleanliness",
+      "Food",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 35,
+    "rating": 5,
+    "userName": "DDanique",
+    "text": "Een van de beste hotels waar ik ben geweest! Een van de fijnste hotels waar ik ben geweest. Onwijs vriendelijke mensen, relaxte sfeer en hele mooie kamers. Het personeel is super vriendelijk en helpt met alles - je kunt alles vragen via Whatsapp en ze reageren snel en regelen alles voor je. Ook tijdens het ontbijt of lunch wordt er even een praatje met je gemaakt. Ik reis solo, en vond het heerlijk om m'n reis in Sri Lanka hier te beginnen. Erg goed eten (ontbijt/lunch/diner), goede cocktails/koffie en fijne sfeer. Het zwembad is rustig en er was altijd een plekje. De kamer is prachtig, alle faciliteiten zijn aanwezig en het is heel schoon. Stad en strand van Mirissa is 10-15 minuten lopen.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Comfort",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 36,
+    "rating": 5,
+    "userName": "Loreen",
+    "text": "Sehr schönes zentral gelegenes Hotel mit stilvoller Einrichtung und zuvorkommendem Personal. Die Lage, das Ambiente und das Personal waren absolut fantastisch. Alles war sauber, der Infinity Pool lädt zum relaxen ein. Zum Frühstück wurden jeden Morgen frische Säfte serviert & ein ausgewogenes Menü stand zur Verfügung. Gibt keine negativen Aspekte",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Facilities",
+      "Staff"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 37,
+    "rating": 5,
+    "userName": "SSvetlana",
+    "text": "Exceptional. Я жила в 3 отелях - в Ахангаме, в Велигаме и здесь в “Niira” в Мириссе. Это был лучший отель по всем параметрам. Красивый интерьер, очень чисто - убираются тщательно, даже в лобби при мне пылесосили подушки дивана с двух сторон, современная сантехника, кофемашина в номере, мощный фен. Большое внимание уделено деталям, каждый день свежие цветы в ресторане, красивая, стильная посуда. Персонал очень внимательный и вежливый, помогает в любых вопросах. В ресторане вкусная еда и хорошее вино. Особенная благодарность господину Амила, за его внимание и помощь. Очень душевное место, которое оставило только положительные впечатления. 🩵",
+    "sentiment": "Positive",
+    "categories": [
+      "Cleanliness",
+      "Staff",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 38,
+    "rating": 5,
+    "userName": "Loreen",
+    "text": "Zentral gelegene & sehr schöne Unterkunft mit europäischen Standards. Alles! Das Hotel ist noch sehr neu und die Ausstattungen und das Design der Zimmer ist hervorragend! Das Personal ist sehr aufmerksam und zuvorkommend. Jedes Detail ist mit Liebe gestaltet. Das im Preis inbegriffene Frühstück ist hervorragend. Die Lage des Hotel ist super zentral zu den umliegenden „Attraktionen“ in Mirissa. Der Pool vom Hotel hat was von einem Infinity Pool. Keine Steckdose im Badezimmer und teils nur lauwarmes Wasser beim Duschen",
+    "sentiment": "Neutral",
+    "categories": [
+      "Facilities",
+      "Staff",
+      "Food"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 39,
+    "rating": 5,
+    "userName": "Hector",
+    "text": "Exceptional. Todo un 10. Un hotel de Gran Lujo por su atención al detalle, su personal y el gran trabajo de su arquitecto. De lo mejor de Sri Lanka. Todo perfecto.",
+    "sentiment": "Positive",
+    "categories": [
+      "Staff",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 40,
+    "rating": 4,
+    "userName": "BBárbara",
+    "text": "Fraca relação qualidade-preço na globalidade. O espaço e decoração são fantásticos, de muito bom gosto. Quarto fiel às imagens fornecidas. Pequeno-almoço à carta, com variedade e produtos frescos. Bebida e docinhos de boas-vindas. A localização é afastada do centro, apesar de acessível a pé. Do hotel, principalmente da piscina, é visível os arredores humildes, com algum cheiro nauseabundo e muitas moscas. Ausência de amenidades na casa de banho, apenas com oferta de chinelos de quarto e disponibilizando shampoo/condicionador/gel de banho. Todas as atividades para os hóspedes são não gratuitas, incluindo as aulas de yoga.",
+    "sentiment": "Neutral",
+    "categories": [
+      "Location",
+      "Value",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 41,
+    "rating": 4,
+    "userName": "Raquel",
+    "text": "Bom. Quarto super confortável (fizeram nos um upgrade gratuito) Pequeno almoço fabuloso. O barulho que se ouve durante a noite por ter um bar perto. Uma situação em que fomos incomodados pelos funcionários durante a noite enquanto estávamos a descansar, porque se enganaram no quarto para entrega de comida!",
+    "sentiment": "Negative",
+    "categories": [
+      "Comfort",
+      "Food",
+      "Noise"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 42,
+    "rating": 5,
+    "userName": "AAnonymous",
+    "text": "Exceptional. Alles sehr hübsch in diesem Hotel! Auch sehr gutes Essen! Haben uns sehr wohl und willkommen gefühlt!",
+    "sentiment": "Positive",
+    "categories": [
+      "Facilities",
+      "Food",
+      "Comfort"
+    ],
+    "source": "Booking.com",
+    "date": "Nov 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 43,
+    "rating": 5,
+    "userName": "MMarc",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Dec 01, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 44,
+    "rating": 5,
+    "userName": "CCyril",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Dec 25, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 45,
+    "rating": 5,
+    "userName": "Nicola",
+    "text": "Superb. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Dec 24, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 46,
+    "rating": 5,
+    "userName": "Olena",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Dec 20, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 47,
+    "rating": 5,
+    "userName": "JJuneja",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Dec 15, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 48,
+    "rating": 5,
+    "userName": "SShah",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Dec 03, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 49,
+    "rating": 5,
+    "userName": "SShah",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Dec 02, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 50,
+    "rating": 5,
+    "userName": "Ashwin",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Nov 18, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 51,
+    "rating": 5,
+    "userName": "Knut",
+    "text": "Toller Standort in Strandnähe. Sehr schöne Einrichtung. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [
+      "Location",
+      "Facilities"
+    ],
+    "source": "Booking.com",
+    "date": "Dec 03, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 52,
+    "rating": 5,
+    "userName": "VVered",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Nov 30, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 53,
+    "rating": 5,
+    "userName": "Kirsten",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Nov 21, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 54,
+    "rating": 5,
+    "userName": "Yury",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Nov 18, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 55,
+    "rating": 5,
+    "userName": "AAndreia",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Nov 18, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 56,
+    "rating": 5,
+    "userName": "TTijmen",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Nov 15, 2025",
+    "status": "Pending"
+  },
+  {
+    "id": 57,
+    "rating": 5,
+    "userName": "AAnonymous",
+    "text": "Exceptional. There are no comments available for this review",
+    "sentiment": "Positive",
+    "categories": [],
+    "source": "Booking.com",
+    "date": "Dec 02, 2025",
+    "status": "Pending"
+  }
+]

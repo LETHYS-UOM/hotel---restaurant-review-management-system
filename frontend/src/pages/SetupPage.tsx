@@ -173,7 +173,7 @@ const SetupPage = () => {
           <Building2 style={styles.icon} />
           <input
             type="text"
-            placeholder="e.g. Ocean Bay Hotel"
+            placeholder="E.g. Ocean Bay Hotel"
             value={organizationName}
             onChange={(e) => setOrganizationName(e.target.value)}
             style={styles.input}
@@ -182,12 +182,12 @@ const SetupPage = () => {
       </div>
 
       <div>
-        <div style={styles.sectionLabel}>Group Assignment</div>
+        <div style={styles.sectionLabel}>Group Link</div>
         <div style={styles.inputWrapper}>
           <Users style={styles.icon} />
           <input
             type="text"
-            placeholder="enter group invite link"
+            placeholder="Enter group invite link"
             value={groupInviteLink}
             onChange={(e) => setGroupInviteLink(e.target.value)}
             style={styles.input}

@@ -79,7 +79,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         {/* System Section */}
         <div className="menu-section">
           <div className="section-title">SYSTEM</div>
-          <SidebarItem icon={<Settings size={20} />} text="Settings" />
+          <SidebarItem 
+            icon={<Settings size={20} />} 
+            text="Settings" 
+            active={isActive('/settings')} 
+            onClick={() => navigate('/settings')} 
+          />
           <SidebarItem icon={<Bell size={20} />} text="Notifications" badge="3" />
           <SidebarItem icon={<User size={20} />} text="Profile" />
         </div>

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Sidebar from './components/SideBar';
 import ReviewsPage from './pages/ReviewsPage';
 import DashboardPage from './pages/DashboardPage';
 import ReviewSourcesPage from './pages/ReviewSourcesPage';
+import SettingsPage from './pages/SettingsPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import SetupPage from './pages/SetupPage';
@@ -53,6 +54,7 @@ const AppContent = () => {
                 <Route path="/dashboard" element={<DashboardPage toggleSidebar={toggleSidebar} />} />
                 <Route path="/reviews" element={<ReviewsPage toggleSidebar={toggleSidebar} />} />
                 <Route path="/sources" element={<ReviewSourcesPage toggleSidebar={toggleSidebar} />} />
+                <Route path="/settings" element={<SettingsPage />} />
               </Routes>
             </main>
           </div>

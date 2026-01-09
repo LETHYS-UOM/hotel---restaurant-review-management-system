@@ -32,9 +32,7 @@ async def root():
 # app.include_router(api_router, prefix="/api/v1")
 
 # 5. Example Endpoint
-@app.get("/reviews")
-async def getReviews():
-    return {"item_id": item_id, "query": q}
+
 
 if __name__ == "__main__":
     import uvicorn

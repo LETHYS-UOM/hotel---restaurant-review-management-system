@@ -163,11 +163,11 @@ def remove_all_reviews_from_db():
         cursor = conn.cursor()
 
         # Delete all records from ProcessedReviews
-        cursor.execute("DELETE FROM dbo.review_photos")
+        cursor.execute("DELETE FROM dbo.reviews")
         conn.commit()
 
         # Delete all records from ReviewPhotos
-        cursor.execute("DELETE FROM dbo.ReviewPhotos")
+        cursor.execute("DELETE FROM dbo.review_photos")
         conn.commit()
         
         # Delete all records from RawReviews
@@ -223,6 +223,21 @@ def count_reviews():
         conn.close()
         return {"total_reviews": count}
 
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+    
+@app.delete("/delete_reviews")
+def delete_all_reviews():
+    """
+    Deletes all reviews from the database.
+    """
+    try:
+        success = remove_all_reviews_from_db()
+        if success:
+            return {"status": "success", "message": "All reviews deleted."}
+        else:
+            raise HTTPException(status_code=500, detail="Failed to delete reviews.")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

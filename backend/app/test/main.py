@@ -155,6 +155,32 @@ def get_all_reviews_from_db():
     except Exception as e:
         print(f"Database Error: {e}")
         raise e 
+    
+    
+def remove_all_reviews_from_db():
+    try:
+        conn = pyodbc.connect(DB_CONNECTION_STRING)
+        cursor = conn.cursor()
+
+        # Delete all records from ProcessedReviews
+        cursor.execute("DELETE FROM dbo.review_photos")
+        conn.commit()
+
+        # Delete all records from ReviewPhotos
+        cursor.execute("DELETE FROM dbo.ReviewPhotos")
+        conn.commit()
+        
+        # Delete all records from RawReviews
+        cursor.execute("DELETE FROM dbo.ProcessedReviews")
+        conn.commit()
+
+
+        conn.close()
+        return True
+    except Exception as e:
+        print(f"Database Error: {e}")
+        raise e 
+
 
 # ==========================================
 # 5. API ROUTES
@@ -163,6 +189,8 @@ def get_all_reviews_from_db():
 @app.get("/")
 def read_root():
     return {"status": "Active", "message": "Visit /docs to see the API"}
+
+
 
 @app.get("/reviews", response_model=List[ReviewModel])
 def read_reviews():

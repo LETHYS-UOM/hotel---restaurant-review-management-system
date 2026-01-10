@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { X, Image as ImageIcon } from "lucide-react";
 import "./ReviewDetailModal.css";
 
 interface ReviewDetailModalProps {
@@ -21,6 +21,7 @@ interface ReviewDetailModalProps {
     lastUpdated: string;
     scrapedAt: string;
     hasReply: string;
+    photos?: { id: number; src: string; alt: string }[];
   };
 }
 
@@ -42,6 +43,10 @@ const ReviewDetailModal = ({
     }
   };
 
+  console.log("Review Details:", review);
+  for (const photo of review.photos || []) {
+    console.log("Photo URL:", photo.src);
+  }
 
   return (
     <div className="review-modal-overlay" onClick={onClose}>
@@ -71,6 +76,32 @@ const ReviewDetailModal = ({
             {/* <p className="review-text">{review.reviewText}</p> */}
             <p className="raw-review">{review.reviewText}</p>
           </div>
+
+          {review.photos && review.photos.length > 0 && (
+            <div className="review-section">
+              <h3 className="section-label">Images</h3>
+              <div className="review-images-grid">
+                {review.photos.map((photo) => (
+                  <div key={photo.id} className="review-image-item">
+                    {photo.src ? (
+                      <img
+                        src={photo.src}
+                        alt={photo.alt}
+                        className="review-image"
+                      />
+                    ) : (
+                      <div className="review-image-placeholder">
+                        <ImageIcon size={24} className="placeholder-icon" />
+                        <span className="placeholder-text">
+                          Image {photo.id}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* AI Analysis */}
           <div className="review-section">

@@ -6,7 +6,10 @@
 /app/test/scraping/BookingOutput
 /app/test/screenshots
 /app/test/BookingOutput
+*__pycache__/
 __pycache__/
+/app/__pycache__/
+/app/test/__pycache__/
 *.pyc
 instance/
 .env
@@ -21,4 +24,3 @@ BookingOutput/*
 /app/screenshots
 /app/analyzed_data_frontend.json
 
-/app/test/promptForFrontender.txt

@@ -8,7 +8,7 @@ interface ReviewProps {
     id: number | string;
     rating: number;
     userName: string;
-    text: string;
+    reviewText: string;
     sentiment: 'Positive' | 'Negative' | 'Neutral';
     categories: string[];
     source: string;
@@ -31,7 +31,7 @@ const ReviewItem = ({ review, onOpen }: ReviewProps) => {
       {/* 2. Snippet */}
       <div className="col-snippet">
         <div className="user-name">{review.userName}</div>
-        <div className="review-text">{review.text}</div>
+        <div className="review-text">{review.reviewText}</div>
       </div>
 
       {/* 3. Sentiment */}

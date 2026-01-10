@@ -1,5 +1,5 @@
-import { X } from 'lucide-react';
-import './ReviewDetailModal.css';
+import { X } from "lucide-react";
+import "./ReviewDetailModal.css";
 
 interface ReviewDetailModalProps {
   isOpen: boolean;
@@ -10,7 +10,7 @@ interface ReviewDetailModalProps {
     rating: number;
     date: string;
     reviewText: string;
-    sentiment: 'Positive' | 'Negative' | 'Neutral';
+    sentiment: "Positive" | "Negative" | "Neutral";
     categories: string[];
     keyPhrases: string[];
     summary: string;
@@ -24,19 +24,24 @@ interface ReviewDetailModalProps {
   };
 }
 
-const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) => {
+const ReviewDetailModal = ({
+  isOpen,
+  onClose,
+  review,
+}: ReviewDetailModalProps) => {
   if (!isOpen) return null;
 
   const getSentimentColor = (sentiment: string) => {
     switch (sentiment) {
-      case 'Positive':
-        return '#10b981';
-      case 'Negative':
-        return '#ef4444';
+      case "Positive":
+        return "#10b981";
+      case "Negative":
+        return "#ef4444";
       default:
-        return '#6b7280';
+        return "#6b7280";
     }
   };
+
 
   return (
     <div className="review-modal-overlay" onClick={onClose}>
@@ -51,7 +56,8 @@ const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) 
           </div>
           <div className="review-rating-date">
             <div className="stars">
-              {'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}
+              {"★".repeat(review.rating)}
+              {"☆".repeat(5 - review.rating)}
             </div>
             <span className="review-date">{review.date}</span>
           </div>
@@ -62,20 +68,21 @@ const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) 
           {/* Review Text */}
           <div className="review-section">
             <h3 className="section-label">Review</h3>
-            <p className="review-text">{review.reviewText}</p>
+            {/* <p className="review-text">{review.reviewText}</p> */}
+            <p className="raw-review">{review.reviewText}</p>
           </div>
 
           {/* AI Analysis */}
           <div className="review-section">
             <h3 className="section-label">AI Analysis</h3>
-            
+
             <div className="analysis-item">
               <span className="analysis-label">Sentiment</span>
-              <span 
-                className="sentiment-badge" 
-                style={{ 
+              <span
+                className="sentiment-badge"
+                style={{
                   backgroundColor: getSentimentColor(review.sentiment),
-                  color: 'white'
+                  color: "white",
                 }}
               >
                 {review.sentiment}
@@ -97,7 +104,9 @@ const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) 
               <span className="analysis-label">Key Phrases</span>
               <div className="key-phrases">
                 {review.keyPhrases.map((phrase, index) => (
-                  <span key={index} className="key-phrase">"{phrase}"</span>
+                  <span key={index} className="key-phrase">
+                    "{phrase}"
+                  </span>
                 ))}
               </div>
             </div>
@@ -112,7 +121,7 @@ const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) 
           <div className="review-section">
             <h3 className="section-label">AI Reply Generator</h3>
             <div className="reply-generator">
-              <textarea 
+              <textarea
                 className="reply-textarea"
                 placeholder="AI generated response will appear here..."
                 rows={4}
@@ -144,7 +153,9 @@ const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) 
               </div>
               <div className="metadata-item">
                 <span className="metadata-label">Platform Review ID</span>
-                <span className="metadata-value">{review.platformReviewId}</span>
+                <span className="metadata-value">
+                  {review.platformReviewId}
+                </span>
               </div>
               <div className="metadata-item">
                 <span className="metadata-label">Language</span>
@@ -176,7 +187,9 @@ const ReviewDetailModal = ({ isOpen, onClose, review }: ReviewDetailModalProps) 
 
         {/* Footer */}
         <div className="review-modal-footer">
-          <button className="btn-secondary" onClick={onClose}>Close</button>
+          <button className="btn-secondary" onClick={onClose}>
+            Close
+          </button>
           <button className="btn-primary">Mark as Replied</button>
           <button className="btn-primary">Save Changes</button>
         </div>

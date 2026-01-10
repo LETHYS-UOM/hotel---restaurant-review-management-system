@@ -1,8 +1,8 @@
 DELETE FROM dbo.reviews
-GO;
+GO
 
 DELETE FROM dbo.review_photos
-GO;
+GO
 
 DELETE FROM dbo.ProcessedReviews
-GO;
+GO

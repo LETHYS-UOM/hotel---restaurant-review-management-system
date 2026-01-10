@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 from fastapi import FastAPI, HTTPException ,BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, AnyHttpUrl
+from pydantic import BaseModel, AnyHttpUrl ,Field
 
 
 from scraping.booking import scrape_booking
@@ -41,7 +41,7 @@ class ReviewModel(BaseModel):
     rating: int
     userName: str
     reviewerName: Optional[str] = None
-    text: Optional[str] = None
+    reviewText: Optional[str] = Field(..., validation_alias="text")
     summary: Optional[str] = None
     sentiment: str
     language: Optional[str] = "English"
@@ -256,6 +256,11 @@ async def start_booking_scrape(payload: BookingScrapeRequest, background_tasks: 
 
     Runs in a background task so the HTTP request returns immediately.
     """
+    # try:
+    #     remove_all_reviews_from_db()
+    # except Exception as exc: 
+    #     raise HTTPException(status_code=500, detail=f"Unable to clear existing reviews: {exc}")
+        
     try:
         background_tasks.add_task(scrape_booking, str(payload.url), payload.headless)
     except Exception as exc:  # noqa: BLE001

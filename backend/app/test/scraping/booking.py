@@ -15,6 +15,7 @@ import sys
 import os
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
 #------------------------------------------------------------------
@@ -364,6 +365,21 @@ def scrape_booking(url: str, headless: bool = True) -> dict:
                 encoding="utf-8",
             )
             print(f"\n✓ Successfully wrote {len(all_reviews)} reviews to reviews.json")
+            
+            
+            #-----------------------------------------------------------------------------------
+            
+            print("Clearing existing reviews from database...")
+            try:
+                from app.test.main import remove_all_reviews_from_db
+            except ImportError:
+                print("Review processor not found; skipping post-processing.")
+                return
+            
+            remove_all_reviews_from_db()
+            
+            #-----------------------------------------------------------------------------------
+            
 
             print("\nSaving reviews to database...")
             for review in all_reviews:

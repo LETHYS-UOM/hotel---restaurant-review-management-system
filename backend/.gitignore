@@ -13,4 +13,6 @@ instance/
 /app/test/services/promt.txt 
 /app/test/services/raw_reviews.txt 
 
-screenshots/
+*screenshots/
+
+/app/test/analyzed_data_frontend.json

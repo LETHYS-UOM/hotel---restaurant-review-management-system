@@ -10,6 +10,7 @@ import SetupPage from './pages/SetupPage';
 import AddSourcesPage from './pages/AddSourcesPage';
 import ChooseSchedulePage from './pages/ChooseSchedulePage';
 import FinishSetupPage from './pages/FinishSetupPage';
+import Scraper from './pages/Scraper';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/setup/sources" element={<AddSourcesPage />} />
         <Route path="/setup/schedule" element={<ChooseSchedulePage />} />
         <Route path="/setup/finish" element={<FinishSetupPage />} />
+        <Route path="/scraper" element={<Scraper />} />
         
         {/* Main app routes with sidebar */}
         <Route

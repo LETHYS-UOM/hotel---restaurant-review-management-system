@@ -18,12 +18,19 @@ from dotenv import load_dotenv
 load_dotenv()
 
 #------------------------------------------------------------------
-# from services import review_processor
+# from ..services import review_processor
 # review_processor.main()
 #------------------------------------------------------------------
 
-from ..services import review_processor
-review_processor.main()
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 2. Go up 3 levels to find the 'backend' folder
+# (scraping -> test -> app -> backend)
+backend_path = os.path.abspath(os.path.join(current_dir, "../../../"))
+
+# 3. Add backend to sys.path so Python can find 'app'
+sys.path.append(backend_path)
+
 
 
 
@@ -117,7 +124,7 @@ def run_review_processor() -> None:
 
     
     try:
-        from test.services import review_processor
+        from app.test.services import review_processor
     except ImportError:
         print("Review processor not found; skipping post-processing.")
         return
@@ -130,7 +137,7 @@ def scrape_booking(url: str, headless: bool = True) -> dict:
     if not url or not url.startswith("http"):
         raise ValueError("A valid Booking.com property reviews URL is required.")
 
-    screenshot_dir = pathlib.Path("screenshots")
+    screenshot_dir = pathlib.Path("scraping/screenshots")
     screenshot_dir.mkdir(parents=True, exist_ok=True)
     print(f"Screenshots will be saved to: {screenshot_dir.absolute()}")
 
@@ -347,7 +354,7 @@ def scrape_booking(url: str, headless: bool = True) -> dict:
                 browser.close()
 
         if all_reviews:
-            output_dir = pathlib.Path("BookingOutput")
+            output_dir = pathlib.Path("scraping/BookingOutput")
             output_dir.mkdir(parents=True, exist_ok=True)
 
             reviews_data = [asdict(review) for review in all_reviews]

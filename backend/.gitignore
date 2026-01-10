@@ -12,3 +12,5 @@ instance/
 /app/test/services/promptForFrontender.txt
 /app/test/services/promt.txt 
 /app/test/services/raw_reviews.txt 
+
+screenshots/

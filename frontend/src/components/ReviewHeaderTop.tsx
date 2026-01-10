@@ -1,13 +1,22 @@
 import React from "react";
-import { Search, Calendar, Download } from "lucide-react";
+import { Search, Calendar, Download, Menu } from "lucide-react";
 import "./ReviewHeaderTop.css";
 
-const ReviewsHeader = () => {
+interface ReviewsHeaderProps {
+  onMenuClick?: () => void;
+}
+
+const ReviewsHeader: React.FC<ReviewsHeaderProps> = ({ onMenuClick }) => {
   return (
     <div className="reviews-header">
       {/* ROW 1: Title and Top Actions */}
       <div className="header-top-row">
-        <h1 className="page-title">Reviews</h1>
+        <div className="title-section">
+          <button className="menu-btn" onClick={onMenuClick}>
+            <Menu size={24} />
+          </button>
+          <h1 className="page-title">Reviews</h1>
+        </div>
         
         <div className="top-actions">
           <div className="search-container">

@@ -34,3 +34,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Backend - Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+
+# Backend - Screenshots and outputs
+**/screenshots/
+**/BookingOutput/
+backend/app/analyzed_data_frontend.json
+backend/app/promptForFrontender.txt
+backend/app/test/services/analyzed_data_frontend.json
+backend/app/test/services/promptForFrontender.txt

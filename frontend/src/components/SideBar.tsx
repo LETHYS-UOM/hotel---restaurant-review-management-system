@@ -2,11 +2,16 @@ import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom'; // <--- 1. Import Router hooks
 import { 
   LayoutDashboard, MessageSquare, BarChart3, Target, Plug, 
-  Building2, Users, Settings, Bell, User, HelpCircle, Mail, LogOut, ChevronLeft 
+  Building2, Users, Settings, Bell, User, HelpCircle, Mail, LogOut, X 
 } from 'lucide-react';
 import './Sidebar.css';
 
-const Sidebar = () => {
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigate = useNavigate();   // Tool to change pages
   const location = useLocation();   // Tool to read current URL
 
@@ -14,7 +19,12 @@ const Sidebar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="sidebar">
+    <>
+      {/* Overlay */}
+      {isOpen && <div className="sidebar-overlay" onClick={onClose}></div>}
+      
+      {/* Sidebar */}
+      <nav className={`sidebar ${isOpen ? 'sidebar-open' : ''}`}>
       {/* 1. HEADER */}
       <div className="sidebar-header">
         <div className="logo-avatar">HR</div>
@@ -22,8 +32,8 @@ const Sidebar = () => {
           <span className="brand-name">ReviewHub</span>
           <span className="hotel-name">Grand Hotel NYC</span>
         </div>
-        <button className="collapse-btn">
-          <ChevronLeft size={16} />
+        <button className="close-btn" onClick={onClose}>
+          <X size={20} />
         </button>
       </div>
 
@@ -69,7 +79,12 @@ const Sidebar = () => {
         {/* System Section */}
         <div className="menu-section">
           <div className="section-title">SYSTEM</div>
-          <SidebarItem icon={<Settings size={20} />} text="Settings" />
+          <SidebarItem 
+            icon={<Settings size={20} />} 
+            text="Settings" 
+            active={isActive('/settings')} 
+            onClick={() => navigate('/settings')} 
+          />
           <SidebarItem icon={<Bell size={20} />} text="Notifications" badge="3" />
           <SidebarItem icon={<User size={20} />} text="Profile" />
         </div>
@@ -87,6 +102,7 @@ const Sidebar = () => {
         <div style={{ height: '20px' }}></div>
       </div>
     </nav>
+    </>
   );
 };
 

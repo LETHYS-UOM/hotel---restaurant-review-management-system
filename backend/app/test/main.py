@@ -273,6 +273,36 @@ async def start_booking_scrape(payload: BookingScrapeRequest, background_tasks: 
     }
 
 
+
+class BookingScrapeRequest(BaseModel):
+    url: AnyHttpUrl
+    headless: bool = True
+
+
+@app.post("/scrape/booking", tags=["Scraping"])
+async def start_booking_scrape(payload: BookingScrapeRequest, background_tasks: BackgroundTasks):
+    """Kick off a Booking.com scrape from the front end.
+
+    Runs in a background task so the HTTP request returns immediately.
+    """
+    
+    try:
+        remove_all_reviews_from_db()
+    except Exception as e:
+        print(e)
+    
+    try:
+        background_tasks.add_task(scrape_booking, str(payload.url), payload.headless)
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(status_code=500, detail=f"Unable to start scrape: {exc}")
+
+    return {
+        "message": "Booking.com scrape started",
+        "url": str(payload.url),
+        "headless": payload.headless,
+    }
+
+
 # ==========================================
 # 6. RUNNER
 # ==========================================

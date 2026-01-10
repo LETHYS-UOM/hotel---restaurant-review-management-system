@@ -71,8 +71,8 @@ const ChooseSchedulePage = () => {
     },
     recommendedBadge: {
       position: 'absolute' as const,
-      top: '16px',
-      left: '16px',
+      top: '10px',
+      left: '10px',
       backgroundColor: '#fef3c7',
       color: '#92400e',
       padding: '4px 12px',

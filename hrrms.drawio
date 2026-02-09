@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.8">
   <diagram name="Page-1" id="fC08RuUYjwZRUPlZasEL">
-    <mxGraphModel dx="3671" dy="1972" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="6824" dy="3368" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2511,6 +2511,36 @@
         <mxCell id="o57RLqiVClQ_QKUdaufN-357" connectable="0" parent="o57RLqiVClQ_QKUdaufN-354" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
           <mxGeometry relative="1" x="-0.3797" y="6" as="geometry">
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTtG0MrkKHinwyVIRCnX-1" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="&lt;div&gt;audit&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="10330" y="4720" as="geometry" />
+        </mxCell>
+        <mxCell id="BTtG0MrkKHinwyVIRCnX-2" edge="1" parent="1" source="BTtG0MrkKHinwyVIRCnX-1" style="endArrow=none;html=1;rounded=0;" target="BTtG0MrkKHinwyVIRCnX-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10400" y="4740" as="sourcePoint" />
+            <mxPoint x="10588" y="4840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTtG0MrkKHinwyVIRCnX-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" value="audit_id" vertex="1">
+          <mxGeometry height="40" width="100" x="10480" y="4750" as="geometry" />
+        </mxCell>
+        <mxCell id="BTtG0MrkKHinwyVIRCnX-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="timestamp" vertex="1">
+          <mxGeometry height="40" width="100" x="10370" y="4655" as="geometry" />
+        </mxCell>
+        <mxCell id="BTtG0MrkKHinwyVIRCnX-6" edge="1" parent="1" source="BTtG0MrkKHinwyVIRCnX-1" style="endArrow=none;html=1;rounded=0;" target="BTtG0MrkKHinwyVIRCnX-5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10460" y="4690" as="sourcePoint" />
+            <mxPoint x="10515" y="4701" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTtG0MrkKHinwyVIRCnX-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="audit_message" vertex="1">
+          <mxGeometry height="40" width="100" x="10200" y="4645" as="geometry" />
+        </mxCell>
+        <mxCell id="BTtG0MrkKHinwyVIRCnX-8" edge="1" parent="1" source="BTtG0MrkKHinwyVIRCnX-1" style="endArrow=none;html=1;rounded=0;" target="BTtG0MrkKHinwyVIRCnX-7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10402" y="4730" as="sourcePoint" />
+            <mxPoint x="10418" y="4704" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
